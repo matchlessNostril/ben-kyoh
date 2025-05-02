@@ -364,7 +364,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@next/eslint-plugin-next@npm:15.3.1":
+"@next/eslint-plugin-next@npm:15.3.1, @next/eslint-plugin-next@npm:^15.3.1":
   version: 15.3.1
   resolution: "@next/eslint-plugin-next@npm:15.3.1"
   dependencies:
@@ -1151,12 +1151,14 @@ __metadata:
   resolution: "ben-kyoh@workspace:."
   dependencies:
     "@eslint/eslintrc": "npm:^3"
+    "@next/eslint-plugin-next": "npm:^15.3.1"
     "@tailwindcss/postcss": "npm:^4"
     "@types/node": "npm:^20"
     "@types/react": "npm:^19"
     "@types/react-dom": "npm:^19"
     eslint: "npm:^9"
     eslint-config-next: "npm:15.3.1"
+    eslint-plugin-react-hooks: "npm:^5.2.0"
     next: "npm:15.3.1"
     react: "npm:^19.0.0"
     react-dom: "npm:^19.0.0"
@@ -1730,7 +1732,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-plugin-react-hooks@npm:^5.0.0":
+"eslint-plugin-react-hooks@npm:^5.0.0, eslint-plugin-react-hooks@npm:^5.2.0":
   version: 5.2.0
   resolution: "eslint-plugin-react-hooks@npm:5.2.0"
   peerDependencies:
