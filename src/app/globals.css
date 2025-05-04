@@ -3,31 +3,35 @@
 /* htmlタグ */
 /* 論理的グローバル変数 */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-/* ダークモードの際、テーマ色を変更 */
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --primary: #9ede63;
+  --primary-light: #b6e87e;
+  --primary-deep1: #6fc746;
+  --primary-deep2: #34c759;
+  --secondary: #ffd233;
+  --pink: #fad4c0;
+  --white: #f8faf7;
+  --black: #222;
+  --gray: #666;
 }
 
 /* 
   tailwind-cssのテーマ変数設定 (utility-class)
-  ex. bg-background, border-background 
+  ex. bg-background, font-sans
 */
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-primary: var(--primary);
+  --color-primary-light: var(--primary-light);
+  --color-primary-deep1: var(--primary-deep1);
+  --color-primary-deep2: var(--primary-deep2);
+  --color-secondary: var(--secondary);
+  --color-pink: var(--pink);
+  --color-white: var(--white);
+  --color-black: var(--black);
+  --color-gray: var(--gray);
+  --font-noto-sans-jp: var(--font-noto-sans-jp);
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--white);
+  font-family: var(--font-noto-sans-jp), Helvetica, sans-serif;
 }
