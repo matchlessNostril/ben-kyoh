@@ -12,12 +12,12 @@ export default function AuthProvider({ children }: { children: ReactNode }) {
   useEffect(() => {
     const { data: listener } = supabaseBrowserClient.auth.onAuthStateChange(
       (event, session) => {
-        if (event === "SIGNED_IN") {
+        if (event === "INITIAL_SESSION" && session) {
           toast.success(
             `${
-              session?.user.identities?.[0].identity_data?.name ||
-              session?.user.email
-            }さん、　ようこそ！ 😆`,
+              session.user.identities?.[0].identity_data?.name ||
+              session.user.email
+            }さん、ようこそ！😆`,
             {
               ...toastConfig,
               toastId: "signInSuccess",
@@ -25,7 +25,7 @@ export default function AuthProvider({ children }: { children: ReactNode }) {
           );
         } else if (event === "SIGNED_OUT") {
           queryClient.invalidateQueries({ queryKey: ["user"] });
-          toast.success("またお会いしましょう！ 🥹", {
+          toast.success("またお会いしましょう！🥹", {
             ...toastConfig,
             toastId: "signOutSuccess",
           });
