@@ -1,10 +1,13 @@
+import { Suspense } from "react";
 import { Header } from "@/components/domain/layout";
 import { LoginToast, FeatureCard } from "./_components";
 
 export default function OnboardingPage() {
   return (
     <main className="h-full flex flex-col bg-gradient-to-b from-primary from-0% via-primary-light via-20% to-white to-50%">
-      <LoginToast />
+      <Suspense fallback={null}>
+        <LoginToast />
+      </Suspense>
 
       <Header />
 
