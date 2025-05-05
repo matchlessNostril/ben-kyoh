@@ -1,25 +1,21 @@
+"use client";
+
 import Image from "next/image";
-import { RoundButton } from "@/components/ui/button";
+import { useRouter, usePathname } from "next/navigation";
 
-export default function Header() {
+export default function Logo() {
+  const router = useRouter();
+  const pathname = usePathname();
+  const outline = pathname === "/";
+
   return (
-    <header className="flex justify-between items-center px-3 py-2 sm:px-5 sm:py-3">
-      <Logo />
-      <RoundButton fill={false}>ログイン</RoundButton>
-    </header>
-  );
-}
-
-type LogoProps = {
-  outline?: boolean;
-};
-
-function Logo({ outline = true }: LogoProps) {
-  return (
-    <div
-      className={`flex items-center gap-1 px-2 py-1.5 sm:px-3 sm:py-2 rounded-full backdrop-blur-sm border
+    <button
+      className={`flex items-center gap-1 px-2 py-1.5 sm:px-3 sm:py-2 rounded-full backdrop-blur-sm border cursor-pointer
         ${outline ? "border-white/20 bg-white/5" : "border-transparent"}
       `}
+      onClick={() => {
+        router.push("/");
+      }}
     >
       <Image
         src="/logo.png"
@@ -38,6 +34,6 @@ function Logo({ outline = true }: LogoProps) {
         <span className="sr-only">ベ</span>
         <span className="opacity-90">ン</span>キョウ
       </h1>
-    </div>
+    </button>
   );
 }
