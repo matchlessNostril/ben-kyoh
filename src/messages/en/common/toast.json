@@ -1,0 +1,7 @@
+{
+  "signInSuccess": "Welcome, {name}! 😆",
+  "signOutSuccess": "See you next time! 🥹",
+  "signInRequired": "Sign-in required.",
+  "signInWithGoogleError": "Failed to sign in with Google.",
+  "signOutError": "Failed to sign out."
+}

@@ -1,0 +1,9 @@
+{
+  "header": {
+    "authButton": {
+      "signIn": "Google ログイン",
+      "signOut": "ログアウト",
+      "toWorkspace": "ワークスペース"
+    }
+  }
+}

@@ -1,4 +1,4 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 
 /* htmlタグ */
 /* 論理的グローバル変数 */
@@ -28,10 +28,18 @@
   --color-white: var(--white);
   --color-black: var(--black);
   --color-gray: var(--gray);
-  --font-noto-sans-jp: var(--font-noto-sans-jp);
 }
 
 body {
   background: var(--white);
-  font-family: var(--font-noto-sans-jp), Helvetica, sans-serif;
+}
+
+html[lang='ja'] body {
+  font-family: var(--font-noto-sans-ja), Helvetica, sans-serif;
+}
+html[lang='ko'] body {
+  font-family: var(--font-noto-sans-ko), Helvetica, sans-serif;
+}
+html[lang='en'] body {
+  font-family: var(--font-noto-sans-en), Helvetica, sans-serif;
 }

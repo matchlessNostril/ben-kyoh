@@ -1,30 +1,33 @@
-"use client";
+'use client';
 
-import { useRouter, usePathname } from "next/navigation";
-import { useUser } from "@/hooks";
-import { RoundButton } from "@/components/ui/button";
+import { useRouter, usePathname } from '@/i18n/routing';
+import { useUser } from '@/hooks';
+import { RoundButton } from '@/components/ui/button';
+import { rootPaths } from '@/constants';
+import { useTranslations } from 'next-intl';
 
 export default function AuthButton() {
   const router = useRouter();
   const pathname = usePathname();
   const { user, signInWithGoogle, signOut } = useUser();
+  const t = useTranslations('common.components.header.authButton');
 
   return (
     <>
-      {pathname === "/" ? (
+      {rootPaths.includes(pathname) ? (
         <>
           {user ? (
-            <RoundButton fill={false} onClick={() => router.push("/workspace")}>
-              ワークスペースへ
+            <RoundButton fill={false} onClick={() => router.push('/workspace')}>
+              {t('toWorkspace')}
             </RoundButton>
           ) : (
             <RoundButton fill={false} onClick={signInWithGoogle}>
-              Google&nbsp;ログイン
+              {t('signIn')}
             </RoundButton>
           )}
         </>
       ) : (
-        <RoundButton onClick={signOut}>ログアウト</RoundButton>
+        <RoundButton onClick={signOut}>{t('signOut')}</RoundButton>
       )}
     </>
   );
