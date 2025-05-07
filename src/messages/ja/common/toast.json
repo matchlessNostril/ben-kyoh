@@ -1,0 +1,7 @@
+{
+  "signInSuccess": "{name}さん、ようこそ！😆",
+  "signOutSuccess": "またお会いしましょう！🥹",
+  "signInRequired": "ログインが必要です。",
+  "signInWithGoogleError": "ログインに失敗しました。",
+  "signOutError": "ログアウトに失敗しました。"
+}
