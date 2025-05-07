@@ -1,7 +1,7 @@
-import { cookies } from "next/headers";
-import { NextResponse, type NextRequest } from "next/server";
-import { createServerClient as _createServerClient } from "@supabase/ssr";
-import { rootPaths } from "@/constants";
+import { cookies } from 'next/headers';
+import { NextResponse, type NextRequest } from 'next/server';
+import { createServerClient as _createServerClient } from '@supabase/ssr';
+import { rootPaths } from '@/constants';
 
 export async function createServerClient() {
   const cookieStore = await cookies();
@@ -17,12 +17,12 @@ export async function createServerClient() {
         setAll(cookiesToSet) {
           try {
             cookiesToSet.forEach(({ name, value, options }) =>
-              cookieStore.set(name, value, options)
+              cookieStore.set(name, value, options),
             );
           } catch {}
         },
       },
-    }
+    },
   );
 }
 
@@ -40,18 +40,16 @@ export async function updateSession(request: NextRequest) {
           return request.cookies.getAll();
         },
         setAll(cookiesToSet) {
-          cookiesToSet.forEach(({ name, value }) =>
-            request.cookies.set(name, value)
-          );
+          cookiesToSet.forEach(({ name, value }) => request.cookies.set(name, value));
           supabaseResponse = NextResponse.next({
             request,
           });
           cookiesToSet.forEach(({ name, value, options }) =>
-            supabaseResponse.cookies.set(name, value, options)
+            supabaseResponse.cookies.set(name, value, options),
           );
         },
       },
-    }
+    },
   );
 
   const {
@@ -59,13 +57,13 @@ export async function updateSession(request: NextRequest) {
   } = await supabaseServerClient.auth.getUser();
 
   const pathname = request.nextUrl.pathname;
-  if (!user && !rootPaths.includes(pathname) && !pathname.includes("/auth")) {
+  if (!user && !rootPaths.includes(pathname) && !pathname.includes('/auth')) {
     const localeMatch = pathname.match(/^\/(en|ko|ja)(\/|$)/);
-    const locale = localeMatch ? localeMatch[1] : "ja";
+    const locale = localeMatch ? localeMatch[1] : 'ja';
 
     const url = request.nextUrl.clone();
     url.pathname = `/${locale}`;
-    url.searchParams.set("auth-redirect", "true");
+    url.searchParams.set('auth-redirect', 'true');
     return NextResponse.redirect(url);
   }
 

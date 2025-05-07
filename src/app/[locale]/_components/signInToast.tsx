@@ -1,24 +1,24 @@
-"use client";
+'use client';
 
-import { useEffect } from "react";
-import { useSearchParams } from "next/navigation";
-import { toast } from "react-toastify";
-import { toastConfig } from "@/constants/toastConfig";
-import { useTranslations } from "next-intl";
-import { useRouter } from "@/i18n/routing";
+import { useEffect } from 'react';
+import { useSearchParams } from 'next/navigation';
+import { toast } from 'react-toastify';
+import { toastConfig } from '@/constants/toastConfig';
+import { useTranslations } from 'next-intl';
+import { useRouter } from '@/i18n/routing';
 
 export default function SignInToast() {
   const searchParams = useSearchParams();
   const router = useRouter();
-  const t = useTranslations("common.toast");
+  const t = useTranslations('common.toast');
 
   useEffect(() => {
-    if (searchParams.get("auth-redirect") === "true") {
-      toast.warning(t("signInRequired"), {
+    if (searchParams.get('auth-redirect') === 'true') {
+      toast.warning(t('signInRequired'), {
         ...toastConfig,
         onClose: () => {
           setTimeout(() => {
-            router.replace("/", { scroll: false });
+            router.replace('/', { scroll: false });
           }, 500);
         },
       });

@@ -1,21 +1,19 @@
-import { NextResponse } from "next/server";
-import { createServerClient } from "@/lib/auth/server";
+import { NextResponse } from 'next/server';
+import { createServerClient } from '@/lib/auth/server';
 
 export async function GET(request: Request) {
   const { searchParams } = new URL(request.url);
-  const code = searchParams.get("code");
+  const code = searchParams.get('code');
 
   const pathname = new URL(request.url).pathname;
   const localeMatch = pathname.match(/^\/(en|ja|ko)(?=\/|$)/);
-  const locale = localeMatch?.[1] ?? "ja";
+  const locale = localeMatch?.[1] ?? 'ja';
 
-  const next = searchParams.get("next") ?? "/workspace";
+  const next = searchParams.get('next') ?? '/workspace';
 
   if (code) {
     const supabaseServerClient = await createServerClient();
-    const { error } = await supabaseServerClient.auth.exchangeCodeForSession(
-      code
-    );
+    const { error } = await supabaseServerClient.auth.exchangeCodeForSession(code);
 
     if (!error) {
       const redirectUrl = `${process.env.NEXT_PUBLIC_SITE_URL}/${locale}${next}`;
@@ -24,6 +22,6 @@ export async function GET(request: Request) {
   }
 
   return NextResponse.redirect(
-    `${process.env.NEXT_PUBLIC_SITE_URL}/${locale}/auth/auth-code-error`
+    `${process.env.NEXT_PUBLIC_SITE_URL}/${locale}/auth/auth-code-error`,
   );
 }

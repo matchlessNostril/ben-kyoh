@@ -1,23 +1,23 @@
-import { Noto_Sans_JP, Noto_Sans_KR, Noto_Sans } from "next/font/google";
-import { hasLocale, NextIntlClientProvider } from "next-intl";
-import { getMessages, setRequestLocale } from "next-intl/server";
-import { notFound } from "next/navigation";
-import { routing } from "@/i18n/routing";
-import { ReactQueryProvider, AuthProvider } from "./providers";
-import { ToastContainer } from "react-toastify";
-import "./globals.css";
+import { routing } from '@/i18n/routing';
+import { hasLocale, NextIntlClientProvider } from 'next-intl';
+import { getMessages, setRequestLocale } from 'next-intl/server';
+import { Noto_Sans, Noto_Sans_JP, Noto_Sans_KR } from 'next/font/google';
+import { notFound } from 'next/navigation';
+import { ToastContainer } from 'react-toastify';
+import './globals.css';
+import { AuthProvider, ReactQueryProvider } from './providers';
 
 const notoSansJA = Noto_Sans_JP({
-  variable: "--font-noto-sans-ja",
-  subsets: ["latin"],
+  variable: '--font-noto-sans-ja',
+  subsets: ['latin'],
 });
 const notoSansEN = Noto_Sans({
-  variable: "--font-noto-sans-en",
-  subsets: ["latin"],
+  variable: '--font-noto-sans-en',
+  subsets: ['latin'],
 });
 const notoSansKR = Noto_Sans_KR({
-  variable: "--font-noto-sans-ko",
-  subsets: ["latin"],
+  variable: '--font-noto-sans-ko',
+  subsets: ['latin'],
 });
 
 export default async function LocaleLayout({
@@ -35,8 +35,7 @@ export default async function LocaleLayout({
   setRequestLocale(locale);
   const messages = await getMessages();
 
-  const font =
-    locale === "ja" ? notoSansJA : locale === "en" ? notoSansEN : notoSansKR;
+  const font = locale === 'ja' ? notoSansJA : locale === 'en' ? notoSansEN : notoSansKR;
 
   return (
     <ReactQueryProvider>

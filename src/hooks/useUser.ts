@@ -1,22 +1,22 @@
-"use client";
+'use client';
 
-import { useSuspenseQuery } from "@tanstack/react-query";
-import { useRouter } from "@/i18n/routing";
+import { useSuspenseQuery } from '@tanstack/react-query';
+import { useRouter } from '@/i18n/routing';
 import {
   signInWithGoogle as _signInWithGoogle,
   signOut as _signOut,
   getUser as _getUser,
-} from "@/lib/auth/client";
-import { useTranslations } from "next-intl";
-import { toast } from "react-toastify";
-import { toastConfig } from "@/constants/toastConfig";
+} from '@/lib/auth/client';
+import { useTranslations } from 'next-intl';
+import { toast } from 'react-toastify';
+import { toastConfig } from '@/constants/toastConfig';
 
 export default function useUser() {
   const router = useRouter();
-  const t = useTranslations("common.toast");
+  const t = useTranslations('common.toast');
 
   const { data: user } = useSuspenseQuery({
-    queryKey: ["user"],
+    queryKey: ['user'],
     queryFn: async () => {
       const { data, error } = await _getUser();
       if (error) {
@@ -30,9 +30,9 @@ export default function useUser() {
   const signInWithGoogle = async () => {
     const { data, error } = await _signInWithGoogle();
     if (error) {
-      toast.error(t("signInWithGoogleError"), {
+      toast.error(t('signInWithGoogleError'), {
         ...toastConfig,
-        toastId: "signInWithGoogleError",
+        toastId: 'signInWithGoogleError',
       });
     }
     return data;
@@ -41,12 +41,12 @@ export default function useUser() {
   const signOut = async () => {
     const { error } = await _signOut();
     if (error) {
-      toast.error(t("signOutError"), {
+      toast.error(t('signOutError'), {
         ...toastConfig,
-        toastId: "signOutError",
+        toastId: 'signOutError',
       });
     } else {
-      router.push("/");
+      router.push('/');
     }
   };
 

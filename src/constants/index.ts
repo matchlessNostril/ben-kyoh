@@ -1,1 +1,1 @@
-export const rootPaths = ["/", "/en", "/ko", "/ja"];
+export const rootPaths = ['/', '/en', '/ko', '/ja'];

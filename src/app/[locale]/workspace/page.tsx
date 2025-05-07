@@ -1,4 +1,4 @@
-import { Header } from "@/components/domain/layout";
+import { Header } from '@/components/domain/layout';
 
 export default function WorkspacePage() {
   return (
