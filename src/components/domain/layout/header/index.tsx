@@ -2,6 +2,7 @@ import { Suspense } from "react";
 import { Skeleton } from "@mui/material";
 import Logo from "./logo";
 import AuthButton from "./authButton";
+import LanguageSwitcher from "./languageSwitcher";
 
 export default function Header() {
   return (
@@ -21,7 +22,10 @@ export default function Header() {
           />
         }
       >
-        <AuthButton />
+        <div className="flex items-center gap-2">
+          <LanguageSwitcher />
+          <AuthButton />
+        </div>
       </Suspense>
     </header>
   );

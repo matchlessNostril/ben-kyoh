@@ -1,6 +1,7 @@
 import { cookies } from "next/headers";
 import { NextResponse, type NextRequest } from "next/server";
 import { createServerClient as _createServerClient } from "@supabase/ssr";
+import { rootPaths } from "@/constants";
 
 export async function createServerClient() {
   const cookieStore = await cookies();
@@ -57,9 +58,13 @@ export async function updateSession(request: NextRequest) {
     data: { user },
   } = await supabaseServerClient.auth.getUser();
 
-  if (!user && request.nextUrl.pathname !== "/") {
+  const pathname = request.nextUrl.pathname;
+  if (!user && !rootPaths.includes(pathname) && !pathname.includes("/auth")) {
+    const localeMatch = pathname.match(/^\/(en|ko|ja)(\/|$)/);
+    const locale = localeMatch ? localeMatch[1] : "ja";
+
     const url = request.nextUrl.clone();
-    url.pathname = "/";
+    url.pathname = `/${locale}`;
     url.searchParams.set("auth-redirect", "true");
     return NextResponse.redirect(url);
   }

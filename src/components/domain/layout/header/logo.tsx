@@ -1,12 +1,13 @@
 "use client";
 
 import Image from "next/image";
-import { useRouter, usePathname } from "next/navigation";
+import { useRouter, usePathname } from "@/i18n/routing";
+import { rootPaths } from "@/constants";
 
 export default function Logo() {
   const router = useRouter();
   const pathname = usePathname();
-  const outline = pathname === "/";
+  const outline = rootPaths.includes(pathname);
 
   return (
     <button
