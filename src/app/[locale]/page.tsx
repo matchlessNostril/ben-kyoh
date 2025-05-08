@@ -22,12 +22,12 @@ export default async function OnboardingPage({ params }: { params: Promise<{ loc
   const t = await getTranslations({ locale, namespace: 'pages.onboarding' });
 
   return (
-    <main className="bg-gray-light h-[calc(100vh-4rem)]">
+    <main className="bg-gray-light3 h-[calc(100vh-var(--header-height))]">
       <Suspense fallback={null}>
         <SignInToast />
       </Suspense>
 
-      <section className="py-[6vh] px-2 text-center lg:py-[8vh] xl:py-[10vh]">
+      <section className="px-2 py-[6vh] text-center lg:py-[8vh] xl:py-[10vh]">
         <h2 className="mb-2 text-xl font-bold sm:mb-4 sm:text-2xl md:text-4xl xl:text-5xl">
           {t('intro.title')}
         </h2>

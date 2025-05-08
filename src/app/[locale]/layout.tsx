@@ -6,7 +6,7 @@ import { notFound } from 'next/navigation';
 import { ToastContainer } from 'react-toastify';
 import './globals.css';
 import { AuthProvider, ReactQueryProvider } from './providers';
-import { Header } from '@/components/domain/layout';
+import { Header } from './_components';
 
 const notoSansJA = Noto_Sans_JP({
   variable: '--font-noto-sans-ja',

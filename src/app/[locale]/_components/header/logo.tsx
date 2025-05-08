@@ -1,14 +1,15 @@
 'use client';
 
 import Image from 'next/image';
-import { useRouter } from '@/i18n/routing';
+import { useRouter, usePathname } from '@/i18n/routing';
 
 export default function Logo() {
   const router = useRouter();
+  const pathname = usePathname();
 
   return (
     <button
-      className="flex cursor-pointer items-center gap-1 rounded-full border border-white/20 bg-white/5 px-2 py-1.5 backdrop-blur-sm sm:px-3 sm:py-2"
+      className="ml-1 flex cursor-pointer items-center gap-1"
       onClick={() => {
         router.push('/');
       }}
@@ -16,11 +17,15 @@ export default function Logo() {
       <Image
         src="/logo.png"
         alt="ベンキョウ logo"
-        width={24}
-        height={24}
-        className="sm:h-[28px] sm:w-[28px]"
+        width={22}
+        height={22}
+        className="sm:h-[25px] sm:w-[25px]"
       />
-      <h1 className="sm:text-md text-primary pb-[1px] text-sm font-bold drop-shadow-sm">
+      <h1
+        className={`sm:text-md text-primary pb-[1px] text-sm font-bold drop-shadow-sm ${
+          pathname === '/' ? 'opacity-100' : 'opacity-0'
+        }`}
+      >
         <span className="sr-only">ベ</span>
         <span className="opacity-90">ン</span>キョウ
       </h1>
