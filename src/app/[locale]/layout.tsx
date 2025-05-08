@@ -36,12 +36,12 @@ export default async function LocaleLayout({
   setRequestLocale(locale);
   const messages = await getMessages();
 
-  const font = locale === 'ja' ? notoSansJA : locale === 'en' ? notoSansEN : notoSansKR;
-
   return (
     <ReactQueryProvider>
       <html lang={locale}>
-        <body className={`${font.variable} antialiased`}>
+        <body
+          className={`${notoSansJA.variable} ${notoSansEN.variable} ${notoSansKR.variable} antialiased`}
+        >
           <NextIntlClientProvider messages={messages}>
             <AuthProvider>
               <Header />

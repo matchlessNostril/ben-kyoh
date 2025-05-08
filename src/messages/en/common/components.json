@@ -5,5 +5,15 @@
       "signOut": "Sign-out",
       "toWorkspace": "Workspace"
     }
+  },
+  "sidebar": {
+    "menu": {
+      "home": "Home",
+      "search": "Search",
+      "voca": "Vocabulary",
+      "grammar": "Grammar",
+      "library": "Library",
+      "test": "Test"
+    }
   }
 }
