@@ -23,14 +23,13 @@ export default async function OnboardingPage({ params }: { params: Promise<{ loc
   const t = await getTranslations({ locale, namespace: 'pages.onboarding' });
 
   return (
-    <main className="from-primary via-primary-light flex h-full flex-col bg-gradient-to-b from-0% via-20% to-white to-50%">
+    <main className="bg-gray-light h-[calc(100vh-4rem)]">
       <Suspense fallback={null}>
         <SignInToast />
       </Suspense>
 
-      <Header />
+      <section className="py-[6vh] px-2 text-center lg:py-[8vh] xl:py-[10vh]">
 
-      <section className="my-[6vh] px-2 text-center lg:my-[8vh] xl:my-[10vh]">
         <h2 className="mb-2 text-xl font-bold sm:mb-4 sm:text-2xl md:text-4xl xl:text-5xl">
           {t('intro.title')}
         </h2>

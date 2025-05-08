@@ -17,13 +17,9 @@ export default function AuthButton() {
       {rootPaths.includes(pathname) ? (
         <>
           {user ? (
-            <RoundButton fill={false} onClick={() => router.push('/workspace')}>
-              {t('toWorkspace')}
-            </RoundButton>
+            <RoundButton onClick={() => router.push('/workspace')}>{t('toWorkspace')}</RoundButton>
           ) : (
-            <RoundButton fill={false} onClick={signInWithGoogle}>
-              {t('signIn')}
-            </RoundButton>
+            <RoundButton onClick={signInWithGoogle}>{t('signIn')}</RoundButton>
           )}
         </>
       ) : (
