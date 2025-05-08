@@ -2,5 +2,8 @@
   "onboarding": {
     "title": "ベンキョウ",
     "description": "日本語学習サイト"
+  },
+  "workspace": {
+    "title": "ワークスペース"
   }
 }
