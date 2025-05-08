@@ -12,6 +12,7 @@
   --white: #f8faf7;
   --black: #222;
   --gray: #666;
+  --gray-light: #f2f2f2;
 }
 
 /* 
@@ -28,6 +29,7 @@
   --color-white: var(--white);
   --color-black: var(--black);
   --color-gray: var(--gray);
+  --color-gray-light: var(--gray-light);
 }
 
 body {

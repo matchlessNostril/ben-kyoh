@@ -1,6 +1,5 @@
 import { Suspense } from 'react';
 import { getTranslations } from 'next-intl/server';
-import { Header } from '@/components/domain/layout';
 import { SignInToast, FeatureCard } from './_components';
 import { routing } from '@/i18n/routing';
 
@@ -29,7 +28,6 @@ export default async function OnboardingPage({ params }: { params: Promise<{ loc
       </Suspense>
 
       <section className="py-[6vh] px-2 text-center lg:py-[8vh] xl:py-[10vh]">
-
         <h2 className="mb-2 text-xl font-bold sm:mb-4 sm:text-2xl md:text-4xl xl:text-5xl">
           {t('intro.title')}
         </h2>
