@@ -6,6 +6,7 @@ import { notFound } from 'next/navigation';
 import { ToastContainer } from 'react-toastify';
 import './globals.css';
 import { AuthProvider, ReactQueryProvider } from './providers';
+import { Header } from './_components';
 
 const notoSansJA = Noto_Sans_JP({
   variable: '--font-noto-sans-ja',
@@ -35,14 +36,17 @@ export default async function LocaleLayout({
   setRequestLocale(locale);
   const messages = await getMessages();
 
-  const font = locale === 'ja' ? notoSansJA : locale === 'en' ? notoSansEN : notoSansKR;
-
   return (
     <ReactQueryProvider>
       <html lang={locale}>
-        <body className={`${font.variable} antialiased`}>
+        <body
+          className={`${notoSansJA.variable} ${notoSansEN.variable} ${notoSansKR.variable} antialiased`}
+        >
           <NextIntlClientProvider messages={messages}>
-            <AuthProvider>{children}</AuthProvider>
+            <AuthProvider>
+              <Header />
+              {children}
+            </AuthProvider>
             <ToastContainer toastClassName="!rounded-lg !p-2 !mt-4 !text-sm sm:!text-base !w-[85vw] sm:!w-[350px]" />
           </NextIntlClientProvider>
         </body>

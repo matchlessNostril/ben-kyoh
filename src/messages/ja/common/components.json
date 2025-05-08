@@ -5,5 +5,15 @@
       "signOut": "ログアウト",
       "toWorkspace": "ワークスペース"
     }
+  },
+  "sidebar": {
+    "menu": {
+      "home": "ホーム",
+      "search": "検索",
+      "voca": "単語",
+      "grammar": "文法",
+      "library": "ライブラリ",
+      "test": "テスト"
+    }
   }
 }

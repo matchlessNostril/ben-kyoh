@@ -4,14 +4,22 @@
 /* 論理的グローバル変数 */
 :root {
   --primary: #9ede63;
-  --primary-light: #b6e87e;
+  --primary-light1: #b6e87e;
+  --primary-light2: #d9f4b7;
+  --primary-light3: #e9f9d9;
   --primary-deep1: #6fc746;
   --primary-deep2: #34c759;
+  --primary-deep3: #009e29;
   --secondary: #ffd233;
   --pink: #fad4c0;
   --white: #f8faf7;
   --black: #222;
   --gray: #666;
+  --gray-light1: #b3b3b3;
+  --gray-light2: #e3e3e3;
+  --gray-light3: #f2f2f2;
+  --header-height: 3.5rem;
+  --sidebar-width: 16rem;
 }
 
 /* 
@@ -20,14 +28,20 @@
 */
 @theme inline {
   --color-primary: var(--primary);
-  --color-primary-light: var(--primary-light);
+  --color-primary-light1: var(--primary-light1);
+  --color-primary-light2: var(--primary-light2);
+  --color-primary-light3: var(--primary-light3);
   --color-primary-deep1: var(--primary-deep1);
   --color-primary-deep2: var(--primary-deep2);
+  --color-primary-deep3: var(--primary-deep3);
   --color-secondary: var(--secondary);
   --color-pink: var(--pink);
   --color-white: var(--white);
   --color-black: var(--black);
   --color-gray: var(--gray);
+  --color-gray-light1: var(--gray-light1);
+  --color-gray-light2: var(--gray-light2);
+  --color-gray-light3: var(--gray-light3);
 }
 
 body {

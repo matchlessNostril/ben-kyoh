@@ -5,5 +5,15 @@
       "signOut": "로그아웃",
       "toWorkspace": "워크스페이스"
     }
+  },
+  "sidebar": {
+    "menu": {
+      "home": "홈",
+      "search": "검색",
+      "voca": "단어",
+      "grammar": "문법",
+      "library": "라이브러리",
+      "test": "테스트"
+    }
   }
 }
