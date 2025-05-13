@@ -21,6 +21,17 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@asteasolutions/zod-to-openapi@npm:^7.3.0":
+  version: 7.3.0
+  resolution: "@asteasolutions/zod-to-openapi@npm:7.3.0"
+  dependencies:
+    openapi3-ts: "npm:^4.1.2"
+  peerDependencies:
+    zod: ^3.20.2
+  checksum: 10c0/f0a68a89929cdeaa3e21d2027489689f982824d676a9332c680e119f60881dd39b571324b24ad4837fda49bf6fe7c3e2af2199268b281bf1aec923d7a7cbfc40
+  languageName: node
+  linkType: hard
+
 "@babel/code-frame@npm:^7.0.0, @babel/code-frame@npm:^7.27.1":
   version: 7.27.1
   resolution: "@babel/code-frame@npm:7.27.1"
@@ -3059,6 +3070,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "ben-kyoh@workspace:."
   dependencies:
+    "@asteasolutions/zod-to-openapi": "npm:^7.3.0"
     "@emotion/react": "npm:^11.14.0"
     "@emotion/styled": "npm:^11.14.0"
     "@eslint/eslintrc": "npm:^3"
@@ -3091,6 +3103,7 @@ __metadata:
     swagger-ui-react: "npm:^5.21.0"
     tailwindcss: "npm:^4"
     typescript: "npm:^5"
+    zod: "npm:^3.24.4"
     zustand: "npm:^5.0.4"
   dependenciesMeta:
     prettier-plugin-tailwindcss@0.6.11:
@@ -6136,6 +6149,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"openapi3-ts@npm:^4.1.2":
+  version: 4.4.0
+  resolution: "openapi3-ts@npm:4.4.0"
+  dependencies:
+    yaml: "npm:^2.5.0"
+  checksum: 10c0/900b834279fc8a43c545728ad75ec7c26934ec5344225b60d1e1c0df44d742d7e7379aea18d9034e03031f079d3308ba5a68600682eece3ed41cdbdd10346a9e
+  languageName: node
+  linkType: hard
+
 "optionator@npm:^0.9.3":
   version: 0.9.4
   resolution: "optionator@npm:0.9.4"
@@ -8193,6 +8215,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"yaml@npm:^2.5.0":
+  version: 2.7.1
+  resolution: "yaml@npm:2.7.1"
+  bin:
+    yaml: bin.mjs
+  checksum: 10c0/ee2126398ab7d1fdde566b4013b68e36930b9e6d8e68b6db356875c99614c10d678b6f45597a145ff6d63814961221fc305bf9242af8bf7450177f8a68537590
+  languageName: node
+  linkType: hard
+
 "yocto-queue@npm:^0.1.0":
   version: 0.1.0
   resolution: "yocto-queue@npm:0.1.0"
@@ -8204,6 +8235,13 @@ __metadata:
   version: 4.0.2
   resolution: "zenscroll@npm:4.0.2"
   checksum: 10c0/419e87ebe3a22a3b2ac22cd02aeccb900c9c330f539efdb1efc382090157d466373ee615812caef5bbe2da140e3c7df222236c8cfd8e697e97d4d91cf3f81c63
+  languageName: node
+  linkType: hard
+
+"zod@npm:^3.24.4":
+  version: 3.24.4
+  resolution: "zod@npm:3.24.4"
+  checksum: 10c0/ab3112f017562180a41a0f83d870b333677f7d6b77f106696c56894567051b91154714a088149d8387a4f50806a2520efcb666f108cd384a35c236a191186d91
   languageName: node
   linkType: hard
 
