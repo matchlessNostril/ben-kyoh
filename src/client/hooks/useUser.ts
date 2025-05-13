@@ -1,15 +1,15 @@
 'use client';
 
 import { useSuspenseQuery } from '@tanstack/react-query';
-import { useRouter } from '@/i18n/routing';
+import { useRouter } from '@/client/i18n/routing';
 import {
   signInWithGoogle as _signInWithGoogle,
   signOut as _signOut,
   getUser as _getUser,
-} from '@/lib/auth/client';
+} from '@/client/auth';
 import { useTranslations } from 'next-intl';
 import { toast } from 'react-toastify';
-import { toastConfig } from '@/constants/toastConfig';
+import { toastConfig } from '@/client/constants/toastConfig';
 
 export default function useUser() {
   const router = useRouter();

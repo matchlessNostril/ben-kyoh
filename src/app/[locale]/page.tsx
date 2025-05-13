@@ -1,7 +1,8 @@
 import { Suspense } from 'react';
 import { getTranslations } from 'next-intl/server';
-import { SignInToast, FeatureCard } from './_components';
-import { routing } from '@/i18n/routing';
+import { routing } from '@/client/i18n/routing';
+import { SignInToast } from '@/client/components/domain/toast';
+import { FeatureCard } from '@/client/components/domain/pages/onboarding';
 
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));

@@ -6,7 +6,7 @@ export default getRequestConfig(async ({ requestLocale }) => {
   const requested = await requestLocale;
   const locale = hasLocale(routing.locales, requested) ? requested : routing.defaultLocale;
 
-  const metadata = (await import(`@/messages/${locale}/metadata.json`)).default;
+  const metadata = (await import(`@/client/messages/${locale}/metadata.json`)).default;
 
   const folders = ['common', 'pages'] as const;
   const filenames = {
@@ -19,7 +19,7 @@ export default getRequestConfig(async ({ requestLocale }) => {
     for (const folder of folders) {
       result[folder] = {};
       for (const file of filenames[folder]) {
-        const mod = (await import(`@/messages/${locale}/${folder}/${file}.json`)) as {
+        const mod = (await import(`@/client/messages/${locale}/${folder}/${file}.json`)) as {
           default: Record<string, unknown>;
         };
         result[folder][file] = mod.default;

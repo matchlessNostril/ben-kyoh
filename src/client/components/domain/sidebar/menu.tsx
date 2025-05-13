@@ -1,9 +1,9 @@
 'use client';
 
 import { useState } from 'react';
-import { Link, usePathname } from '@/i18n/routing';
-import { useSidebarStore } from '@/stores';
-import { useMediaQuery } from '@/hooks';
+import { Link, usePathname } from '@/client/i18n/routing';
+import { useSidebarStore } from '@/client/stores';
+import { useMediaQuery } from '@/client/hooks';
 import MenuItems, { GroupMenu } from './menuItems';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import ExpandLessIcon from '@mui/icons-material/ExpandLess';

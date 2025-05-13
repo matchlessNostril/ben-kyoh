@@ -1,7 +1,7 @@
 'use client';
 
-import { useSidebarStore } from '@/stores';
-import { useMediaQuery } from '@/hooks';
+import { useSidebarStore } from '@/client/stores';
+import { useMediaQuery } from '@/client/hooks';
 
 export default function ExpandableArea({ children }: { children: React.ReactNode }) {
   const { isOpen } = useSidebarStore();

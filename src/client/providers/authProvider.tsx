@@ -2,9 +2,9 @@
 
 import { ReactNode, useEffect } from 'react';
 import { useQueryClient } from '@tanstack/react-query';
-import { supabaseBrowserClient } from '@/lib/auth/client';
+import { supabaseBrowserClient } from '@/client/auth';
 import { toast } from 'react-toastify';
-import { toastConfig } from '@/constants/toastConfig';
+import { toastConfig } from '@/client/constants/toastConfig';
 import { useTranslations } from 'next-intl';
 
 const SIGN_IN_NOTIFIED_KEY = 'auth_signin_notified';
