@@ -1,12 +1,12 @@
-import { routing } from '@/i18n/routing';
+import { notFound } from 'next/navigation';
+import { Noto_Sans, Noto_Sans_JP, Noto_Sans_KR } from 'next/font/google';
 import { hasLocale, NextIntlClientProvider } from 'next-intl';
 import { getMessages, setRequestLocale } from 'next-intl/server';
-import { Noto_Sans, Noto_Sans_JP, Noto_Sans_KR } from 'next/font/google';
-import { notFound } from 'next/navigation';
+import { routing } from '@/client/i18n/routing';
 import { ToastContainer } from 'react-toastify';
-import './globals.css';
-import { AuthProvider, ReactQueryProvider } from './providers';
-import { Header } from './_components';
+import { AuthProvider, ReactQueryProvider } from '@/client/providers';
+import Header from '@/client/components/domain/header';
+import '@/client/globals.css';
 
 const notoSansJA = Noto_Sans_JP({
   variable: '--font-noto-sans-ja',

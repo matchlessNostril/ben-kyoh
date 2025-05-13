@@ -1,9 +1,9 @@
 'use client';
 
-import { usePathname } from '@/i18n/routing';
-import { useSidebarStore } from '@/stores';
-import { rootPaths } from '@/constants';
+import { usePathname } from '@/client/i18n/routing';
+import { useSidebarStore } from '@/client/stores';
 import MenuRoundedIcon from '@mui/icons-material/MenuRounded';
+import { rootPaths } from '@/shared/constants';
 
 export default function SideBarToggle() {
   const { toggleSidebar } = useSidebarStore();

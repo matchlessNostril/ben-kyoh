@@ -1,7 +1,7 @@
 'use client';
 
 import Image from 'next/image';
-import { useRouter, usePathname } from '@/i18n/routing';
+import { useRouter, usePathname } from '@/client/i18n/routing';
 
 export default function Logo() {
   const router = useRouter();

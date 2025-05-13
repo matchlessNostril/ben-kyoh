@@ -2,10 +2,10 @@
 
 import { useEffect } from 'react';
 import { useSearchParams } from 'next/navigation';
-import { toast } from 'react-toastify';
-import { toastConfig } from '@/constants/toastConfig';
 import { useTranslations } from 'next-intl';
-import { useRouter } from '@/i18n/routing';
+import { useRouter } from '@/client/i18n/routing';
+import { toast } from 'react-toastify';
+import { toastConfig } from '@/client/constants/toastConfig';
 
 export default function SignInToast() {
   const searchParams = useSearchParams();

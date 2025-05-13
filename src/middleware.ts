@@ -1,7 +1,7 @@
 import { type NextRequest } from 'next/server';
-import { updateSession } from '@/lib/auth/server';
 import createMiddleware from 'next-intl/middleware';
-import { routing } from '@/i18n/routing';
+import { routing } from '@/client/i18n/routing';
+import { updateSession } from '@/server/core/auth';
 
 export async function middleware(request: NextRequest) {
   // 1. 認証

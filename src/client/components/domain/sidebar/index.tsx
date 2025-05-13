@@ -1,7 +1,7 @@
 'use client';
 
-import { useSidebarStore } from '@/stores';
-import { useMediaQuery } from '@/hooks';
+import { useSidebarStore } from '@/client/stores';
+import { useMediaQuery } from '@/client/hooks';
 import Profile from './profile';
 import Menu from './menu';
 

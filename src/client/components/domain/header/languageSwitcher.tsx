@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import { useLocale } from 'next-intl';
-import { routing, useRouter, usePathname } from '@/i18n/routing';
+import { routing, useRouter, usePathname } from '@/client/i18n/routing';
 import { MenuItem, Menu, IconButton } from '@mui/material';
 import PublicRoundedIcon from '@mui/icons-material/PublicRounded';
 
