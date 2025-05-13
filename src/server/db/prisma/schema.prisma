@@ -1,0 +1,137 @@
+generator client {
+  provider = "prisma-client-js"
+  output   = "../src/server/db/prisma"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+/// This model contains row level security and requires additional setup for migrations. Visit https://pris.ly/d/row-level-security for more info.
+model grammar_file_test_links {
+  file_id       String        @db.Uuid
+  test_id       String        @db.Uuid
+  grammar_files grammar_files @relation(fields: [file_id], references: [id], onDelete: Cascade, onUpdate: NoAction, map: "grammar_file_test_links_grammar_file_id_fkey")
+  grammar_tests grammar_tests @relation(fields: [test_id], references: [id], onDelete: Cascade, onUpdate: NoAction, map: "grammar_file_test_links_grammar_test_id_fkey")
+
+  @@id([file_id, test_id])
+}
+
+/// This model contains row level security and requires additional setup for migrations. Visit https://pris.ly/d/row-level-security for more info.
+model grammar_files {
+  id                      String                    @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  user_id                 String                    @default(dbgenerated("auth.uid()")) @db.Uuid
+  folder_id               String?                   @db.Uuid
+  name                    String
+  is_favorited            Boolean                   @default(false)
+  is_published            Boolean                   @default(false)
+  tag                     String[]
+  created_at              DateTime                  @default(now()) @db.Timestamptz(6)
+  grammar_file_test_links grammar_file_test_links[]
+  grammar_folders         grammar_folders?          @relation(fields: [folder_id], references: [id], onDelete: Cascade, onUpdate: NoAction)
+}
+
+/// This model contains row level security and requires additional setup for migrations. Visit https://pris.ly/d/row-level-security for more info.
+model grammar_folders {
+  id            String          @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  user_id       String          @default(dbgenerated("auth.uid()")) @db.Uuid
+  parent_id     String?         @db.Uuid
+  name          String
+  is_favorited  Boolean         @default(false)
+  is_published  Boolean         @default(false)
+  tag           String[]
+  created_at    DateTime        @default(now()) @db.Timestamptz(6)
+  grammar_files grammar_files[]
+}
+
+/// This model contains row level security and requires additional setup for migrations. Visit https://pris.ly/d/row-level-security for more info.
+model grammar_test_folders {
+  id            String          @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  user_id       String          @default(dbgenerated("auth.uid()")) @db.Uuid
+  parent_id     String?         @db.Uuid
+  name          String
+  is_favorited  Boolean         @default(false)
+  is_published  Boolean         @default(false)
+  tag           String[]
+  created_at    DateTime        @default(now()) @db.Timestamptz(6)
+  grammar_tests grammar_tests[]
+}
+
+/// This model contains row level security and requires additional setup for migrations. Visit https://pris.ly/d/row-level-security for more info.
+model grammar_tests {
+  id                      String                    @id(map: "grammar_test_files_pkey") @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  user_id                 String                    @default(dbgenerated("auth.uid()")) @db.Uuid
+  folder_id               String?                   @db.Uuid
+  name                    String
+  is_favorited            Boolean                   @default(false)
+  is_published            Boolean                   @default(false)
+  tag                     String[]
+  created_at              DateTime                  @default(now()) @db.Timestamptz(6)
+  grammar_file_test_links grammar_file_test_links[]
+  grammar_test_folders    grammar_test_folders?     @relation(fields: [folder_id], references: [id], onDelete: Cascade, onUpdate: NoAction, map: "grammar_test_files_folder_id_fkey1")
+}
+
+/// This model contains row level security and requires additional setup for migrations. Visit https://pris.ly/d/row-level-security for more info.
+model voca_file_test_links {
+  file_id    String     @db.Uuid
+  test_id    String     @db.Uuid
+  voca_tests voca_tests @relation(fields: [test_id], references: [id], onDelete: Cascade, onUpdate: NoAction, map: "voca_file_test_links_test_file_id_fkey")
+  voca_files voca_files @relation(fields: [file_id], references: [id], onDelete: Cascade, onUpdate: NoAction, map: "voca_file_test_links_voca_file_id_fkey")
+
+  @@id([file_id, test_id])
+}
+
+/// This model contains row level security and requires additional setup for migrations. Visit https://pris.ly/d/row-level-security for more info.
+model voca_files {
+  id                   String                 @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  user_id              String                 @default(dbgenerated("auth.uid()")) @db.Uuid
+  folder_id            String?                @db.Uuid
+  name                 String
+  is_favorited         Boolean                @default(false)
+  is_published         Boolean                @default(false)
+  tag                  String[]
+  created_at           DateTime               @default(now()) @db.Timestamptz(6)
+  voca_file_test_links voca_file_test_links[]
+  voca_folders         voca_folders?          @relation(fields: [folder_id], references: [id], onDelete: Cascade, onUpdate: NoAction)
+}
+
+/// This model contains row level security and requires additional setup for migrations. Visit https://pris.ly/d/row-level-security for more info.
+model voca_folders {
+  id           String       @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  user_id      String       @default(dbgenerated("auth.uid()")) @db.Uuid
+  parent_id    String?      @db.Uuid
+  name         String
+  is_favorited Boolean      @default(false)
+  is_published Boolean      @default(false)
+  tag          String[]
+  created_at   DateTime     @default(now()) @db.Timestamptz(6)
+  voca_files   voca_files[]
+}
+
+/// This model contains row level security and requires additional setup for migrations. Visit https://pris.ly/d/row-level-security for more info.
+model voca_test_folders {
+  id           String       @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  user_id      String       @default(dbgenerated("auth.uid()")) @db.Uuid
+  parent_id    String?      @db.Uuid
+  name         String
+  is_favorited Boolean      @default(false)
+  is_published Boolean      @default(false)
+  tag          String[]
+  created_at   DateTime     @default(now()) @db.Timestamptz(6)
+  voca_tests   voca_tests[]
+}
+
+/// This model contains row level security and requires additional setup for migrations. Visit https://pris.ly/d/row-level-security for more info.
+model voca_tests {
+  id                   String                 @id(map: "voca_test_files_pkey") @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  user_id              String                 @default(dbgenerated("auth.uid()")) @db.Uuid
+  folder_id            String?                @db.Uuid
+  name                 String
+  is_favorited         Boolean                @default(false)
+  is_published         Boolean                @default(false)
+  tags                 String[]
+  created_at           DateTime               @default(now()) @db.Timestamptz(6)
+  voca_file_test_links voca_file_test_links[]
+  voca_test_folders    voca_test_folders?     @relation(fields: [folder_id], references: [id], onDelete: Cascade, onUpdate: NoAction, map: "voca_test_files_folder_id_fkey")
+}
