@@ -1,10 +1,10 @@
 'use client';
 
+import { useTranslations } from 'next-intl';
 import { useRouter, usePathname } from '@/client/i18n/routing';
 import { useUser } from '@/client/hooks';
 import { RoundButton } from '@/client/components/ui/button';
 import { rootPaths } from '@/shared/constants';
-import { useTranslations } from 'next-intl';
 
 export default function AuthButton() {
   const router = useRouter();

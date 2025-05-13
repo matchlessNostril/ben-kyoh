@@ -1,14 +1,14 @@
 'use client';
 
-import { useSuspenseQuery } from '@tanstack/react-query';
+import { useTranslations } from 'next-intl';
 import { useRouter } from '@/client/i18n/routing';
+import { useSuspenseQuery } from '@tanstack/react-query';
+import { toast } from 'react-toastify';
 import {
   signInWithGoogle as _signInWithGoogle,
   signOut as _signOut,
   getUser as _getUser,
 } from '@/client/auth';
-import { useTranslations } from 'next-intl';
-import { toast } from 'react-toastify';
 import { toastConfig } from '@/client/constants/toastConfig';
 
 export default function useUser() {

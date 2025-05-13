@@ -1,11 +1,11 @@
 'use client';
 
 import { ReactNode, useEffect } from 'react';
-import { useQueryClient } from '@tanstack/react-query';
-import { supabaseBrowserClient } from '@/client/auth';
-import { toast } from 'react-toastify';
-import { toastConfig } from '@/client/constants/toastConfig';
 import { useTranslations } from 'next-intl';
+import { useQueryClient } from '@tanstack/react-query';
+import { toast } from 'react-toastify';
+import { supabaseBrowserClient } from '@/client/auth';
+import { toastConfig } from '@/client/constants/toastConfig';
 
 const SIGN_IN_NOTIFIED_KEY = 'auth_signin_notified';
 
