@@ -8,6 +8,7 @@
     "start": "next start",
     "lint": "next lint",
     "lint-build": "next lint && next build",
+    "vercel:build": "yarn prisma:generate && yarn build",
     "prisma:init": "yarn pnpify prisma init",
     "prisma:pull": "yarn pnpify prisma db pull",
     "prisma:generate": "yarn pnpify prisma generate",
