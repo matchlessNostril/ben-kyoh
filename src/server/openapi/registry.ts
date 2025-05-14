@@ -13,7 +13,7 @@ import { registerGrammarTestSchemas } from '@/domains/grammarTest/server/create/
 
 export const registry = new OpenAPIRegistry();
 
-// 共通スキマ
+// 共通スキーマ
 registry.register('ResourceRequestSchema', resourceRequestSchema);
 registry.register('ResourceResponseSchema', resourceResponseSchema);
 

@@ -1,6 +1,6 @@
 import { z } from 'zod';
 
-// Folder & File 共通スキマ
+// Folder & File 共通スキーマ
 export const resourceRequestSchema = z.object({
   name: z.string().min(1),
   is_favorited: z.boolean().optional().default(false),
