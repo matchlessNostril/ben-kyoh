@@ -132,7 +132,7 @@ exports.Prisma.Grammar_filesScalarFieldEnum = {
   name: 'name',
   is_favorited: 'is_favorited',
   is_published: 'is_published',
-  tag: 'tag',
+  tags: 'tags',
   created_at: 'created_at'
 };
 
@@ -143,7 +143,7 @@ exports.Prisma.Grammar_foldersScalarFieldEnum = {
   name: 'name',
   is_favorited: 'is_favorited',
   is_published: 'is_published',
-  tag: 'tag',
+  tags: 'tags',
   created_at: 'created_at'
 };
 
@@ -154,7 +154,7 @@ exports.Prisma.Grammar_test_foldersScalarFieldEnum = {
   name: 'name',
   is_favorited: 'is_favorited',
   is_published: 'is_published',
-  tag: 'tag',
+  tags: 'tags',
   created_at: 'created_at'
 };
 
@@ -165,7 +165,7 @@ exports.Prisma.Grammar_testsScalarFieldEnum = {
   name: 'name',
   is_favorited: 'is_favorited',
   is_published: 'is_published',
-  tag: 'tag',
+  tags: 'tags',
   created_at: 'created_at'
 };
 
@@ -181,7 +181,7 @@ exports.Prisma.Voca_filesScalarFieldEnum = {
   name: 'name',
   is_favorited: 'is_favorited',
   is_published: 'is_published',
-  tag: 'tag',
+  tags: 'tags',
   created_at: 'created_at'
 };
 
@@ -192,7 +192,7 @@ exports.Prisma.Voca_foldersScalarFieldEnum = {
   name: 'name',
   is_favorited: 'is_favorited',
   is_published: 'is_published',
-  tag: 'tag',
+  tags: 'tags',
   created_at: 'created_at'
 };
 
@@ -203,7 +203,7 @@ exports.Prisma.Voca_test_foldersScalarFieldEnum = {
   name: 'name',
   is_favorited: 'is_favorited',
   is_published: 'is_published',
-  tag: 'tag',
+  tags: 'tags',
   created_at: 'created_at'
 };
 

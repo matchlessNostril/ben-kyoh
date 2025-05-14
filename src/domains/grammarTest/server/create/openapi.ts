@@ -1,26 +1,26 @@
 import { OpenAPIRegistry } from '@asteasolutions/zod-to-openapi';
 import { resourceResponseSchema } from '@/server/base/schemas/resource';
-import { createFolderRequestSchema } from './schema';
+import { createGrammarTestRequestSchema } from './schema';
 
-export const registerFolderSchemas = (registry: OpenAPIRegistry) => {
-  registry.register('CreateFolderRequest', createFolderRequestSchema);
+export const registerGrammarTestSchemas = (registry: OpenAPIRegistry) => {
+  registry.register('CreateGrammarTestRequest', createGrammarTestRequestSchema);
 
   registry.registerPath({
     method: 'post',
-    path: '/api/folder/create',
-    tags: ['Folder'],
+    path: '/api/grammar-test/create',
+    tags: ['GrammarTest'],
     request: {
       body: {
         content: {
           'application/json': {
-            schema: createFolderRequestSchema,
+            schema: createGrammarTestRequestSchema,
           },
         },
       },
     },
     responses: {
       201: {
-        description: 'complete to create folder',
+        description: 'complete to create grammar test',
         content: {
           'application/json': {
             schema: resourceResponseSchema,

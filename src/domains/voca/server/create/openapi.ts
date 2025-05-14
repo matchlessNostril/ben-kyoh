@@ -1,26 +1,26 @@
 import { OpenAPIRegistry } from '@asteasolutions/zod-to-openapi';
 import { resourceResponseSchema } from '@/server/base/schemas/resource';
-import { createFolderRequestSchema } from './schema';
+import { createVocaRequestSchema } from './schema';
 
-export const registerFolderSchemas = (registry: OpenAPIRegistry) => {
-  registry.register('CreateFolderRequest', createFolderRequestSchema);
+export const registerVocaSchemas = (registry: OpenAPIRegistry) => {
+  registry.register('CreateVocaRequest', createVocaRequestSchema);
 
   registry.registerPath({
     method: 'post',
-    path: '/api/folder/create',
-    tags: ['Folder'],
+    path: '/api/voca/create',
+    tags: ['Voca'],
     request: {
       body: {
         content: {
           'application/json': {
-            schema: createFolderRequestSchema,
+            schema: createVocaRequestSchema,
           },
         },
       },
     },
     responses: {
       201: {
-        description: 'complete to create folder',
+        description: 'complete to create voca',
         content: {
           'application/json': {
             schema: resourceResponseSchema,

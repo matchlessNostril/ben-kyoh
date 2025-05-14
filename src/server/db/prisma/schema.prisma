@@ -26,7 +26,7 @@ model grammar_files {
   name                    String
   is_favorited            Boolean                   @default(false)
   is_published            Boolean                   @default(false)
-  tag                     String[]
+  tags                    String[]
   created_at              DateTime                  @default(now()) @db.Timestamptz(6)
   grammar_file_test_links grammar_file_test_links[]
   grammar_folders         grammar_folders?          @relation(fields: [folder_id], references: [id], onDelete: Cascade, onUpdate: NoAction)
@@ -40,7 +40,7 @@ model grammar_folders {
   name          String
   is_favorited  Boolean         @default(false)
   is_published  Boolean         @default(false)
-  tag           String[]
+  tags          String[]
   created_at    DateTime        @default(now()) @db.Timestamptz(6)
   grammar_files grammar_files[]
 }
@@ -53,7 +53,7 @@ model grammar_test_folders {
   name          String
   is_favorited  Boolean         @default(false)
   is_published  Boolean         @default(false)
-  tag           String[]
+  tags          String[]
   created_at    DateTime        @default(now()) @db.Timestamptz(6)
   grammar_tests grammar_tests[]
 }
@@ -66,7 +66,7 @@ model grammar_tests {
   name                    String
   is_favorited            Boolean                   @default(false)
   is_published            Boolean                   @default(false)
-  tag                     String[]
+  tags                    String[]
   created_at              DateTime                  @default(now()) @db.Timestamptz(6)
   grammar_file_test_links grammar_file_test_links[]
   grammar_test_folders    grammar_test_folders?     @relation(fields: [folder_id], references: [id], onDelete: Cascade, onUpdate: NoAction, map: "grammar_test_files_folder_id_fkey1")
@@ -90,7 +90,7 @@ model voca_files {
   name                 String
   is_favorited         Boolean                @default(false)
   is_published         Boolean                @default(false)
-  tag                  String[]
+  tags                 String[]
   created_at           DateTime               @default(now()) @db.Timestamptz(6)
   voca_file_test_links voca_file_test_links[]
   voca_folders         voca_folders?          @relation(fields: [folder_id], references: [id], onDelete: Cascade, onUpdate: NoAction)
@@ -104,7 +104,7 @@ model voca_folders {
   name         String
   is_favorited Boolean      @default(false)
   is_published Boolean      @default(false)
-  tag          String[]
+  tags         String[]
   created_at   DateTime     @default(now()) @db.Timestamptz(6)
   voca_files   voca_files[]
 }
@@ -117,7 +117,7 @@ model voca_test_folders {
   name         String
   is_favorited Boolean      @default(false)
   is_published Boolean      @default(false)
-  tag          String[]
+  tags         String[]
   created_at   DateTime     @default(now()) @db.Timestamptz(6)
   voca_tests   voca_tests[]
 }

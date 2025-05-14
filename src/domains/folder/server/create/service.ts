@@ -1,5 +1,5 @@
 import { prisma } from '@/server/db/client';
-import { CreateFolderRequest } from './schema';
+import { CreateFolderRequestType } from './schema';
 
 const modelMap = {
   voca_library: 'voca_folders',
@@ -8,7 +8,7 @@ const modelMap = {
   grammar_test: 'grammar_test_folders',
 } as const;
 
-export async function createFolder(user_id: string, request: CreateFolderRequest) {
+export async function createFolder(user_id: string, request: CreateFolderRequestType) {
   const { type, ...rest } = request;
 
   const model = modelMap[type];

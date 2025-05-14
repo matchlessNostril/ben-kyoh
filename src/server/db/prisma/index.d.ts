@@ -2999,7 +2999,7 @@ export namespace Prisma {
     name: number
     is_favorited: number
     is_published: number
-    tag: number
+    tags: number
     created_at: number
     _all: number
   }
@@ -3032,7 +3032,7 @@ export namespace Prisma {
     name?: true
     is_favorited?: true
     is_published?: true
-    tag?: true
+    tags?: true
     created_at?: true
     _all?: true
   }
@@ -3116,7 +3116,7 @@ export namespace Prisma {
     name: string
     is_favorited: boolean
     is_published: boolean
-    tag: string[]
+    tags: string[]
     created_at: Date
     _count: Grammar_filesCountAggregateOutputType | null
     _min: Grammar_filesMinAggregateOutputType | null
@@ -3144,7 +3144,7 @@ export namespace Prisma {
     name?: boolean
     is_favorited?: boolean
     is_published?: boolean
-    tag?: boolean
+    tags?: boolean
     created_at?: boolean
     grammar_file_test_links?: boolean | grammar_files$grammar_file_test_linksArgs<ExtArgs>
     grammar_folders?: boolean | grammar_files$grammar_foldersArgs<ExtArgs>
@@ -3158,7 +3158,7 @@ export namespace Prisma {
     name?: boolean
     is_favorited?: boolean
     is_published?: boolean
-    tag?: boolean
+    tags?: boolean
     created_at?: boolean
     grammar_folders?: boolean | grammar_files$grammar_foldersArgs<ExtArgs>
   }, ExtArgs["result"]["grammar_files"]>
@@ -3170,7 +3170,7 @@ export namespace Prisma {
     name?: boolean
     is_favorited?: boolean
     is_published?: boolean
-    tag?: boolean
+    tags?: boolean
     created_at?: boolean
     grammar_folders?: boolean | grammar_files$grammar_foldersArgs<ExtArgs>
   }, ExtArgs["result"]["grammar_files"]>
@@ -3182,11 +3182,11 @@ export namespace Prisma {
     name?: boolean
     is_favorited?: boolean
     is_published?: boolean
-    tag?: boolean
+    tags?: boolean
     created_at?: boolean
   }
 
-  export type grammar_filesOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "user_id" | "folder_id" | "name" | "is_favorited" | "is_published" | "tag" | "created_at", ExtArgs["result"]["grammar_files"]>
+  export type grammar_filesOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "user_id" | "folder_id" | "name" | "is_favorited" | "is_published" | "tags" | "created_at", ExtArgs["result"]["grammar_files"]>
   export type grammar_filesInclude<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     grammar_file_test_links?: boolean | grammar_files$grammar_file_test_linksArgs<ExtArgs>
     grammar_folders?: boolean | grammar_files$grammar_foldersArgs<ExtArgs>
@@ -3212,7 +3212,7 @@ export namespace Prisma {
       name: string
       is_favorited: boolean
       is_published: boolean
-      tag: string[]
+      tags: string[]
       created_at: Date
     }, ExtArgs["result"]["grammar_files"]>
     composites: {}
@@ -3645,7 +3645,7 @@ export namespace Prisma {
     readonly name: FieldRef<"grammar_files", 'String'>
     readonly is_favorited: FieldRef<"grammar_files", 'Boolean'>
     readonly is_published: FieldRef<"grammar_files", 'Boolean'>
-    readonly tag: FieldRef<"grammar_files", 'String[]'>
+    readonly tags: FieldRef<"grammar_files", 'String[]'>
     readonly created_at: FieldRef<"grammar_files", 'DateTime'>
   }
     
@@ -4141,7 +4141,7 @@ export namespace Prisma {
     name: number
     is_favorited: number
     is_published: number
-    tag: number
+    tags: number
     created_at: number
     _all: number
   }
@@ -4174,7 +4174,7 @@ export namespace Prisma {
     name?: true
     is_favorited?: true
     is_published?: true
-    tag?: true
+    tags?: true
     created_at?: true
     _all?: true
   }
@@ -4258,7 +4258,7 @@ export namespace Prisma {
     name: string
     is_favorited: boolean
     is_published: boolean
-    tag: string[]
+    tags: string[]
     created_at: Date
     _count: Grammar_foldersCountAggregateOutputType | null
     _min: Grammar_foldersMinAggregateOutputType | null
@@ -4286,7 +4286,7 @@ export namespace Prisma {
     name?: boolean
     is_favorited?: boolean
     is_published?: boolean
-    tag?: boolean
+    tags?: boolean
     created_at?: boolean
     grammar_files?: boolean | grammar_folders$grammar_filesArgs<ExtArgs>
     _count?: boolean | Grammar_foldersCountOutputTypeDefaultArgs<ExtArgs>
@@ -4299,7 +4299,7 @@ export namespace Prisma {
     name?: boolean
     is_favorited?: boolean
     is_published?: boolean
-    tag?: boolean
+    tags?: boolean
     created_at?: boolean
   }, ExtArgs["result"]["grammar_folders"]>
 
@@ -4310,7 +4310,7 @@ export namespace Prisma {
     name?: boolean
     is_favorited?: boolean
     is_published?: boolean
-    tag?: boolean
+    tags?: boolean
     created_at?: boolean
   }, ExtArgs["result"]["grammar_folders"]>
 
@@ -4321,11 +4321,11 @@ export namespace Prisma {
     name?: boolean
     is_favorited?: boolean
     is_published?: boolean
-    tag?: boolean
+    tags?: boolean
     created_at?: boolean
   }
 
-  export type grammar_foldersOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "user_id" | "parent_id" | "name" | "is_favorited" | "is_published" | "tag" | "created_at", ExtArgs["result"]["grammar_folders"]>
+  export type grammar_foldersOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "user_id" | "parent_id" | "name" | "is_favorited" | "is_published" | "tags" | "created_at", ExtArgs["result"]["grammar_folders"]>
   export type grammar_foldersInclude<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     grammar_files?: boolean | grammar_folders$grammar_filesArgs<ExtArgs>
     _count?: boolean | Grammar_foldersCountOutputTypeDefaultArgs<ExtArgs>
@@ -4345,7 +4345,7 @@ export namespace Prisma {
       name: string
       is_favorited: boolean
       is_published: boolean
-      tag: string[]
+      tags: string[]
       created_at: Date
     }, ExtArgs["result"]["grammar_folders"]>
     composites: {}
@@ -4777,7 +4777,7 @@ export namespace Prisma {
     readonly name: FieldRef<"grammar_folders", 'String'>
     readonly is_favorited: FieldRef<"grammar_folders", 'Boolean'>
     readonly is_published: FieldRef<"grammar_folders", 'Boolean'>
-    readonly tag: FieldRef<"grammar_folders", 'String[]'>
+    readonly tags: FieldRef<"grammar_folders", 'String[]'>
     readonly created_at: FieldRef<"grammar_folders", 'DateTime'>
   }
     
@@ -5246,7 +5246,7 @@ export namespace Prisma {
     name: number
     is_favorited: number
     is_published: number
-    tag: number
+    tags: number
     created_at: number
     _all: number
   }
@@ -5279,7 +5279,7 @@ export namespace Prisma {
     name?: true
     is_favorited?: true
     is_published?: true
-    tag?: true
+    tags?: true
     created_at?: true
     _all?: true
   }
@@ -5363,7 +5363,7 @@ export namespace Prisma {
     name: string
     is_favorited: boolean
     is_published: boolean
-    tag: string[]
+    tags: string[]
     created_at: Date
     _count: Grammar_test_foldersCountAggregateOutputType | null
     _min: Grammar_test_foldersMinAggregateOutputType | null
@@ -5391,7 +5391,7 @@ export namespace Prisma {
     name?: boolean
     is_favorited?: boolean
     is_published?: boolean
-    tag?: boolean
+    tags?: boolean
     created_at?: boolean
     grammar_tests?: boolean | grammar_test_folders$grammar_testsArgs<ExtArgs>
     _count?: boolean | Grammar_test_foldersCountOutputTypeDefaultArgs<ExtArgs>
@@ -5404,7 +5404,7 @@ export namespace Prisma {
     name?: boolean
     is_favorited?: boolean
     is_published?: boolean
-    tag?: boolean
+    tags?: boolean
     created_at?: boolean
   }, ExtArgs["result"]["grammar_test_folders"]>
 
@@ -5415,7 +5415,7 @@ export namespace Prisma {
     name?: boolean
     is_favorited?: boolean
     is_published?: boolean
-    tag?: boolean
+    tags?: boolean
     created_at?: boolean
   }, ExtArgs["result"]["grammar_test_folders"]>
 
@@ -5426,11 +5426,11 @@ export namespace Prisma {
     name?: boolean
     is_favorited?: boolean
     is_published?: boolean
-    tag?: boolean
+    tags?: boolean
     created_at?: boolean
   }
 
-  export type grammar_test_foldersOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "user_id" | "parent_id" | "name" | "is_favorited" | "is_published" | "tag" | "created_at", ExtArgs["result"]["grammar_test_folders"]>
+  export type grammar_test_foldersOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "user_id" | "parent_id" | "name" | "is_favorited" | "is_published" | "tags" | "created_at", ExtArgs["result"]["grammar_test_folders"]>
   export type grammar_test_foldersInclude<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     grammar_tests?: boolean | grammar_test_folders$grammar_testsArgs<ExtArgs>
     _count?: boolean | Grammar_test_foldersCountOutputTypeDefaultArgs<ExtArgs>
@@ -5450,7 +5450,7 @@ export namespace Prisma {
       name: string
       is_favorited: boolean
       is_published: boolean
-      tag: string[]
+      tags: string[]
       created_at: Date
     }, ExtArgs["result"]["grammar_test_folders"]>
     composites: {}
@@ -5882,7 +5882,7 @@ export namespace Prisma {
     readonly name: FieldRef<"grammar_test_folders", 'String'>
     readonly is_favorited: FieldRef<"grammar_test_folders", 'Boolean'>
     readonly is_published: FieldRef<"grammar_test_folders", 'Boolean'>
-    readonly tag: FieldRef<"grammar_test_folders", 'String[]'>
+    readonly tags: FieldRef<"grammar_test_folders", 'String[]'>
     readonly created_at: FieldRef<"grammar_test_folders", 'DateTime'>
   }
     
@@ -6351,7 +6351,7 @@ export namespace Prisma {
     name: number
     is_favorited: number
     is_published: number
-    tag: number
+    tags: number
     created_at: number
     _all: number
   }
@@ -6384,7 +6384,7 @@ export namespace Prisma {
     name?: true
     is_favorited?: true
     is_published?: true
-    tag?: true
+    tags?: true
     created_at?: true
     _all?: true
   }
@@ -6468,7 +6468,7 @@ export namespace Prisma {
     name: string
     is_favorited: boolean
     is_published: boolean
-    tag: string[]
+    tags: string[]
     created_at: Date
     _count: Grammar_testsCountAggregateOutputType | null
     _min: Grammar_testsMinAggregateOutputType | null
@@ -6496,7 +6496,7 @@ export namespace Prisma {
     name?: boolean
     is_favorited?: boolean
     is_published?: boolean
-    tag?: boolean
+    tags?: boolean
     created_at?: boolean
     grammar_file_test_links?: boolean | grammar_tests$grammar_file_test_linksArgs<ExtArgs>
     grammar_test_folders?: boolean | grammar_tests$grammar_test_foldersArgs<ExtArgs>
@@ -6510,7 +6510,7 @@ export namespace Prisma {
     name?: boolean
     is_favorited?: boolean
     is_published?: boolean
-    tag?: boolean
+    tags?: boolean
     created_at?: boolean
     grammar_test_folders?: boolean | grammar_tests$grammar_test_foldersArgs<ExtArgs>
   }, ExtArgs["result"]["grammar_tests"]>
@@ -6522,7 +6522,7 @@ export namespace Prisma {
     name?: boolean
     is_favorited?: boolean
     is_published?: boolean
-    tag?: boolean
+    tags?: boolean
     created_at?: boolean
     grammar_test_folders?: boolean | grammar_tests$grammar_test_foldersArgs<ExtArgs>
   }, ExtArgs["result"]["grammar_tests"]>
@@ -6534,11 +6534,11 @@ export namespace Prisma {
     name?: boolean
     is_favorited?: boolean
     is_published?: boolean
-    tag?: boolean
+    tags?: boolean
     created_at?: boolean
   }
 
-  export type grammar_testsOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "user_id" | "folder_id" | "name" | "is_favorited" | "is_published" | "tag" | "created_at", ExtArgs["result"]["grammar_tests"]>
+  export type grammar_testsOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "user_id" | "folder_id" | "name" | "is_favorited" | "is_published" | "tags" | "created_at", ExtArgs["result"]["grammar_tests"]>
   export type grammar_testsInclude<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     grammar_file_test_links?: boolean | grammar_tests$grammar_file_test_linksArgs<ExtArgs>
     grammar_test_folders?: boolean | grammar_tests$grammar_test_foldersArgs<ExtArgs>
@@ -6564,7 +6564,7 @@ export namespace Prisma {
       name: string
       is_favorited: boolean
       is_published: boolean
-      tag: string[]
+      tags: string[]
       created_at: Date
     }, ExtArgs["result"]["grammar_tests"]>
     composites: {}
@@ -6997,7 +6997,7 @@ export namespace Prisma {
     readonly name: FieldRef<"grammar_tests", 'String'>
     readonly is_favorited: FieldRef<"grammar_tests", 'Boolean'>
     readonly is_published: FieldRef<"grammar_tests", 'Boolean'>
-    readonly tag: FieldRef<"grammar_tests", 'String[]'>
+    readonly tags: FieldRef<"grammar_tests", 'String[]'>
     readonly created_at: FieldRef<"grammar_tests", 'DateTime'>
   }
     
@@ -8520,7 +8520,7 @@ export namespace Prisma {
     name: number
     is_favorited: number
     is_published: number
-    tag: number
+    tags: number
     created_at: number
     _all: number
   }
@@ -8553,7 +8553,7 @@ export namespace Prisma {
     name?: true
     is_favorited?: true
     is_published?: true
-    tag?: true
+    tags?: true
     created_at?: true
     _all?: true
   }
@@ -8637,7 +8637,7 @@ export namespace Prisma {
     name: string
     is_favorited: boolean
     is_published: boolean
-    tag: string[]
+    tags: string[]
     created_at: Date
     _count: Voca_filesCountAggregateOutputType | null
     _min: Voca_filesMinAggregateOutputType | null
@@ -8665,7 +8665,7 @@ export namespace Prisma {
     name?: boolean
     is_favorited?: boolean
     is_published?: boolean
-    tag?: boolean
+    tags?: boolean
     created_at?: boolean
     voca_file_test_links?: boolean | voca_files$voca_file_test_linksArgs<ExtArgs>
     voca_folders?: boolean | voca_files$voca_foldersArgs<ExtArgs>
@@ -8679,7 +8679,7 @@ export namespace Prisma {
     name?: boolean
     is_favorited?: boolean
     is_published?: boolean
-    tag?: boolean
+    tags?: boolean
     created_at?: boolean
     voca_folders?: boolean | voca_files$voca_foldersArgs<ExtArgs>
   }, ExtArgs["result"]["voca_files"]>
@@ -8691,7 +8691,7 @@ export namespace Prisma {
     name?: boolean
     is_favorited?: boolean
     is_published?: boolean
-    tag?: boolean
+    tags?: boolean
     created_at?: boolean
     voca_folders?: boolean | voca_files$voca_foldersArgs<ExtArgs>
   }, ExtArgs["result"]["voca_files"]>
@@ -8703,11 +8703,11 @@ export namespace Prisma {
     name?: boolean
     is_favorited?: boolean
     is_published?: boolean
-    tag?: boolean
+    tags?: boolean
     created_at?: boolean
   }
 
-  export type voca_filesOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "user_id" | "folder_id" | "name" | "is_favorited" | "is_published" | "tag" | "created_at", ExtArgs["result"]["voca_files"]>
+  export type voca_filesOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "user_id" | "folder_id" | "name" | "is_favorited" | "is_published" | "tags" | "created_at", ExtArgs["result"]["voca_files"]>
   export type voca_filesInclude<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     voca_file_test_links?: boolean | voca_files$voca_file_test_linksArgs<ExtArgs>
     voca_folders?: boolean | voca_files$voca_foldersArgs<ExtArgs>
@@ -8733,7 +8733,7 @@ export namespace Prisma {
       name: string
       is_favorited: boolean
       is_published: boolean
-      tag: string[]
+      tags: string[]
       created_at: Date
     }, ExtArgs["result"]["voca_files"]>
     composites: {}
@@ -9166,7 +9166,7 @@ export namespace Prisma {
     readonly name: FieldRef<"voca_files", 'String'>
     readonly is_favorited: FieldRef<"voca_files", 'Boolean'>
     readonly is_published: FieldRef<"voca_files", 'Boolean'>
-    readonly tag: FieldRef<"voca_files", 'String[]'>
+    readonly tags: FieldRef<"voca_files", 'String[]'>
     readonly created_at: FieldRef<"voca_files", 'DateTime'>
   }
     
@@ -9662,7 +9662,7 @@ export namespace Prisma {
     name: number
     is_favorited: number
     is_published: number
-    tag: number
+    tags: number
     created_at: number
     _all: number
   }
@@ -9695,7 +9695,7 @@ export namespace Prisma {
     name?: true
     is_favorited?: true
     is_published?: true
-    tag?: true
+    tags?: true
     created_at?: true
     _all?: true
   }
@@ -9779,7 +9779,7 @@ export namespace Prisma {
     name: string
     is_favorited: boolean
     is_published: boolean
-    tag: string[]
+    tags: string[]
     created_at: Date
     _count: Voca_foldersCountAggregateOutputType | null
     _min: Voca_foldersMinAggregateOutputType | null
@@ -9807,7 +9807,7 @@ export namespace Prisma {
     name?: boolean
     is_favorited?: boolean
     is_published?: boolean
-    tag?: boolean
+    tags?: boolean
     created_at?: boolean
     voca_files?: boolean | voca_folders$voca_filesArgs<ExtArgs>
     _count?: boolean | Voca_foldersCountOutputTypeDefaultArgs<ExtArgs>
@@ -9820,7 +9820,7 @@ export namespace Prisma {
     name?: boolean
     is_favorited?: boolean
     is_published?: boolean
-    tag?: boolean
+    tags?: boolean
     created_at?: boolean
   }, ExtArgs["result"]["voca_folders"]>
 
@@ -9831,7 +9831,7 @@ export namespace Prisma {
     name?: boolean
     is_favorited?: boolean
     is_published?: boolean
-    tag?: boolean
+    tags?: boolean
     created_at?: boolean
   }, ExtArgs["result"]["voca_folders"]>
 
@@ -9842,11 +9842,11 @@ export namespace Prisma {
     name?: boolean
     is_favorited?: boolean
     is_published?: boolean
-    tag?: boolean
+    tags?: boolean
     created_at?: boolean
   }
 
-  export type voca_foldersOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "user_id" | "parent_id" | "name" | "is_favorited" | "is_published" | "tag" | "created_at", ExtArgs["result"]["voca_folders"]>
+  export type voca_foldersOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "user_id" | "parent_id" | "name" | "is_favorited" | "is_published" | "tags" | "created_at", ExtArgs["result"]["voca_folders"]>
   export type voca_foldersInclude<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     voca_files?: boolean | voca_folders$voca_filesArgs<ExtArgs>
     _count?: boolean | Voca_foldersCountOutputTypeDefaultArgs<ExtArgs>
@@ -9866,7 +9866,7 @@ export namespace Prisma {
       name: string
       is_favorited: boolean
       is_published: boolean
-      tag: string[]
+      tags: string[]
       created_at: Date
     }, ExtArgs["result"]["voca_folders"]>
     composites: {}
@@ -10298,7 +10298,7 @@ export namespace Prisma {
     readonly name: FieldRef<"voca_folders", 'String'>
     readonly is_favorited: FieldRef<"voca_folders", 'Boolean'>
     readonly is_published: FieldRef<"voca_folders", 'Boolean'>
-    readonly tag: FieldRef<"voca_folders", 'String[]'>
+    readonly tags: FieldRef<"voca_folders", 'String[]'>
     readonly created_at: FieldRef<"voca_folders", 'DateTime'>
   }
     
@@ -10767,7 +10767,7 @@ export namespace Prisma {
     name: number
     is_favorited: number
     is_published: number
-    tag: number
+    tags: number
     created_at: number
     _all: number
   }
@@ -10800,7 +10800,7 @@ export namespace Prisma {
     name?: true
     is_favorited?: true
     is_published?: true
-    tag?: true
+    tags?: true
     created_at?: true
     _all?: true
   }
@@ -10884,7 +10884,7 @@ export namespace Prisma {
     name: string
     is_favorited: boolean
     is_published: boolean
-    tag: string[]
+    tags: string[]
     created_at: Date
     _count: Voca_test_foldersCountAggregateOutputType | null
     _min: Voca_test_foldersMinAggregateOutputType | null
@@ -10912,7 +10912,7 @@ export namespace Prisma {
     name?: boolean
     is_favorited?: boolean
     is_published?: boolean
-    tag?: boolean
+    tags?: boolean
     created_at?: boolean
     voca_tests?: boolean | voca_test_folders$voca_testsArgs<ExtArgs>
     _count?: boolean | Voca_test_foldersCountOutputTypeDefaultArgs<ExtArgs>
@@ -10925,7 +10925,7 @@ export namespace Prisma {
     name?: boolean
     is_favorited?: boolean
     is_published?: boolean
-    tag?: boolean
+    tags?: boolean
     created_at?: boolean
   }, ExtArgs["result"]["voca_test_folders"]>
 
@@ -10936,7 +10936,7 @@ export namespace Prisma {
     name?: boolean
     is_favorited?: boolean
     is_published?: boolean
-    tag?: boolean
+    tags?: boolean
     created_at?: boolean
   }, ExtArgs["result"]["voca_test_folders"]>
 
@@ -10947,11 +10947,11 @@ export namespace Prisma {
     name?: boolean
     is_favorited?: boolean
     is_published?: boolean
-    tag?: boolean
+    tags?: boolean
     created_at?: boolean
   }
 
-  export type voca_test_foldersOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "user_id" | "parent_id" | "name" | "is_favorited" | "is_published" | "tag" | "created_at", ExtArgs["result"]["voca_test_folders"]>
+  export type voca_test_foldersOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "user_id" | "parent_id" | "name" | "is_favorited" | "is_published" | "tags" | "created_at", ExtArgs["result"]["voca_test_folders"]>
   export type voca_test_foldersInclude<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     voca_tests?: boolean | voca_test_folders$voca_testsArgs<ExtArgs>
     _count?: boolean | Voca_test_foldersCountOutputTypeDefaultArgs<ExtArgs>
@@ -10971,7 +10971,7 @@ export namespace Prisma {
       name: string
       is_favorited: boolean
       is_published: boolean
-      tag: string[]
+      tags: string[]
       created_at: Date
     }, ExtArgs["result"]["voca_test_folders"]>
     composites: {}
@@ -11403,7 +11403,7 @@ export namespace Prisma {
     readonly name: FieldRef<"voca_test_folders", 'String'>
     readonly is_favorited: FieldRef<"voca_test_folders", 'Boolean'>
     readonly is_published: FieldRef<"voca_test_folders", 'Boolean'>
-    readonly tag: FieldRef<"voca_test_folders", 'String[]'>
+    readonly tags: FieldRef<"voca_test_folders", 'String[]'>
     readonly created_at: FieldRef<"voca_test_folders", 'DateTime'>
   }
     
@@ -13006,7 +13006,7 @@ export namespace Prisma {
     name: 'name',
     is_favorited: 'is_favorited',
     is_published: 'is_published',
-    tag: 'tag',
+    tags: 'tags',
     created_at: 'created_at'
   };
 
@@ -13020,7 +13020,7 @@ export namespace Prisma {
     name: 'name',
     is_favorited: 'is_favorited',
     is_published: 'is_published',
-    tag: 'tag',
+    tags: 'tags',
     created_at: 'created_at'
   };
 
@@ -13034,7 +13034,7 @@ export namespace Prisma {
     name: 'name',
     is_favorited: 'is_favorited',
     is_published: 'is_published',
-    tag: 'tag',
+    tags: 'tags',
     created_at: 'created_at'
   };
 
@@ -13048,7 +13048,7 @@ export namespace Prisma {
     name: 'name',
     is_favorited: 'is_favorited',
     is_published: 'is_published',
-    tag: 'tag',
+    tags: 'tags',
     created_at: 'created_at'
   };
 
@@ -13070,7 +13070,7 @@ export namespace Prisma {
     name: 'name',
     is_favorited: 'is_favorited',
     is_published: 'is_published',
-    tag: 'tag',
+    tags: 'tags',
     created_at: 'created_at'
   };
 
@@ -13084,7 +13084,7 @@ export namespace Prisma {
     name: 'name',
     is_favorited: 'is_favorited',
     is_published: 'is_published',
-    tag: 'tag',
+    tags: 'tags',
     created_at: 'created_at'
   };
 
@@ -13098,7 +13098,7 @@ export namespace Prisma {
     name: 'name',
     is_favorited: 'is_favorited',
     is_published: 'is_published',
-    tag: 'tag',
+    tags: 'tags',
     created_at: 'created_at'
   };
 
@@ -13254,7 +13254,7 @@ export namespace Prisma {
     name?: StringFilter<"grammar_files"> | string
     is_favorited?: BoolFilter<"grammar_files"> | boolean
     is_published?: BoolFilter<"grammar_files"> | boolean
-    tag?: StringNullableListFilter<"grammar_files">
+    tags?: StringNullableListFilter<"grammar_files">
     created_at?: DateTimeFilter<"grammar_files"> | Date | string
     grammar_file_test_links?: Grammar_file_test_linksListRelationFilter
     grammar_folders?: XOR<Grammar_foldersNullableScalarRelationFilter, grammar_foldersWhereInput> | null
@@ -13267,7 +13267,7 @@ export namespace Prisma {
     name?: SortOrder
     is_favorited?: SortOrder
     is_published?: SortOrder
-    tag?: SortOrder
+    tags?: SortOrder
     created_at?: SortOrder
     grammar_file_test_links?: grammar_file_test_linksOrderByRelationAggregateInput
     grammar_folders?: grammar_foldersOrderByWithRelationInput
@@ -13283,7 +13283,7 @@ export namespace Prisma {
     name?: StringFilter<"grammar_files"> | string
     is_favorited?: BoolFilter<"grammar_files"> | boolean
     is_published?: BoolFilter<"grammar_files"> | boolean
-    tag?: StringNullableListFilter<"grammar_files">
+    tags?: StringNullableListFilter<"grammar_files">
     created_at?: DateTimeFilter<"grammar_files"> | Date | string
     grammar_file_test_links?: Grammar_file_test_linksListRelationFilter
     grammar_folders?: XOR<Grammar_foldersNullableScalarRelationFilter, grammar_foldersWhereInput> | null
@@ -13296,7 +13296,7 @@ export namespace Prisma {
     name?: SortOrder
     is_favorited?: SortOrder
     is_published?: SortOrder
-    tag?: SortOrder
+    tags?: SortOrder
     created_at?: SortOrder
     _count?: grammar_filesCountOrderByAggregateInput
     _max?: grammar_filesMaxOrderByAggregateInput
@@ -13313,7 +13313,7 @@ export namespace Prisma {
     name?: StringWithAggregatesFilter<"grammar_files"> | string
     is_favorited?: BoolWithAggregatesFilter<"grammar_files"> | boolean
     is_published?: BoolWithAggregatesFilter<"grammar_files"> | boolean
-    tag?: StringNullableListFilter<"grammar_files">
+    tags?: StringNullableListFilter<"grammar_files">
     created_at?: DateTimeWithAggregatesFilter<"grammar_files"> | Date | string
   }
 
@@ -13327,7 +13327,7 @@ export namespace Prisma {
     name?: StringFilter<"grammar_folders"> | string
     is_favorited?: BoolFilter<"grammar_folders"> | boolean
     is_published?: BoolFilter<"grammar_folders"> | boolean
-    tag?: StringNullableListFilter<"grammar_folders">
+    tags?: StringNullableListFilter<"grammar_folders">
     created_at?: DateTimeFilter<"grammar_folders"> | Date | string
     grammar_files?: Grammar_filesListRelationFilter
   }
@@ -13339,7 +13339,7 @@ export namespace Prisma {
     name?: SortOrder
     is_favorited?: SortOrder
     is_published?: SortOrder
-    tag?: SortOrder
+    tags?: SortOrder
     created_at?: SortOrder
     grammar_files?: grammar_filesOrderByRelationAggregateInput
   }
@@ -13354,7 +13354,7 @@ export namespace Prisma {
     name?: StringFilter<"grammar_folders"> | string
     is_favorited?: BoolFilter<"grammar_folders"> | boolean
     is_published?: BoolFilter<"grammar_folders"> | boolean
-    tag?: StringNullableListFilter<"grammar_folders">
+    tags?: StringNullableListFilter<"grammar_folders">
     created_at?: DateTimeFilter<"grammar_folders"> | Date | string
     grammar_files?: Grammar_filesListRelationFilter
   }, "id">
@@ -13366,7 +13366,7 @@ export namespace Prisma {
     name?: SortOrder
     is_favorited?: SortOrder
     is_published?: SortOrder
-    tag?: SortOrder
+    tags?: SortOrder
     created_at?: SortOrder
     _count?: grammar_foldersCountOrderByAggregateInput
     _max?: grammar_foldersMaxOrderByAggregateInput
@@ -13383,7 +13383,7 @@ export namespace Prisma {
     name?: StringWithAggregatesFilter<"grammar_folders"> | string
     is_favorited?: BoolWithAggregatesFilter<"grammar_folders"> | boolean
     is_published?: BoolWithAggregatesFilter<"grammar_folders"> | boolean
-    tag?: StringNullableListFilter<"grammar_folders">
+    tags?: StringNullableListFilter<"grammar_folders">
     created_at?: DateTimeWithAggregatesFilter<"grammar_folders"> | Date | string
   }
 
@@ -13397,7 +13397,7 @@ export namespace Prisma {
     name?: StringFilter<"grammar_test_folders"> | string
     is_favorited?: BoolFilter<"grammar_test_folders"> | boolean
     is_published?: BoolFilter<"grammar_test_folders"> | boolean
-    tag?: StringNullableListFilter<"grammar_test_folders">
+    tags?: StringNullableListFilter<"grammar_test_folders">
     created_at?: DateTimeFilter<"grammar_test_folders"> | Date | string
     grammar_tests?: Grammar_testsListRelationFilter
   }
@@ -13409,7 +13409,7 @@ export namespace Prisma {
     name?: SortOrder
     is_favorited?: SortOrder
     is_published?: SortOrder
-    tag?: SortOrder
+    tags?: SortOrder
     created_at?: SortOrder
     grammar_tests?: grammar_testsOrderByRelationAggregateInput
   }
@@ -13424,7 +13424,7 @@ export namespace Prisma {
     name?: StringFilter<"grammar_test_folders"> | string
     is_favorited?: BoolFilter<"grammar_test_folders"> | boolean
     is_published?: BoolFilter<"grammar_test_folders"> | boolean
-    tag?: StringNullableListFilter<"grammar_test_folders">
+    tags?: StringNullableListFilter<"grammar_test_folders">
     created_at?: DateTimeFilter<"grammar_test_folders"> | Date | string
     grammar_tests?: Grammar_testsListRelationFilter
   }, "id">
@@ -13436,7 +13436,7 @@ export namespace Prisma {
     name?: SortOrder
     is_favorited?: SortOrder
     is_published?: SortOrder
-    tag?: SortOrder
+    tags?: SortOrder
     created_at?: SortOrder
     _count?: grammar_test_foldersCountOrderByAggregateInput
     _max?: grammar_test_foldersMaxOrderByAggregateInput
@@ -13453,7 +13453,7 @@ export namespace Prisma {
     name?: StringWithAggregatesFilter<"grammar_test_folders"> | string
     is_favorited?: BoolWithAggregatesFilter<"grammar_test_folders"> | boolean
     is_published?: BoolWithAggregatesFilter<"grammar_test_folders"> | boolean
-    tag?: StringNullableListFilter<"grammar_test_folders">
+    tags?: StringNullableListFilter<"grammar_test_folders">
     created_at?: DateTimeWithAggregatesFilter<"grammar_test_folders"> | Date | string
   }
 
@@ -13467,7 +13467,7 @@ export namespace Prisma {
     name?: StringFilter<"grammar_tests"> | string
     is_favorited?: BoolFilter<"grammar_tests"> | boolean
     is_published?: BoolFilter<"grammar_tests"> | boolean
-    tag?: StringNullableListFilter<"grammar_tests">
+    tags?: StringNullableListFilter<"grammar_tests">
     created_at?: DateTimeFilter<"grammar_tests"> | Date | string
     grammar_file_test_links?: Grammar_file_test_linksListRelationFilter
     grammar_test_folders?: XOR<Grammar_test_foldersNullableScalarRelationFilter, grammar_test_foldersWhereInput> | null
@@ -13480,7 +13480,7 @@ export namespace Prisma {
     name?: SortOrder
     is_favorited?: SortOrder
     is_published?: SortOrder
-    tag?: SortOrder
+    tags?: SortOrder
     created_at?: SortOrder
     grammar_file_test_links?: grammar_file_test_linksOrderByRelationAggregateInput
     grammar_test_folders?: grammar_test_foldersOrderByWithRelationInput
@@ -13496,7 +13496,7 @@ export namespace Prisma {
     name?: StringFilter<"grammar_tests"> | string
     is_favorited?: BoolFilter<"grammar_tests"> | boolean
     is_published?: BoolFilter<"grammar_tests"> | boolean
-    tag?: StringNullableListFilter<"grammar_tests">
+    tags?: StringNullableListFilter<"grammar_tests">
     created_at?: DateTimeFilter<"grammar_tests"> | Date | string
     grammar_file_test_links?: Grammar_file_test_linksListRelationFilter
     grammar_test_folders?: XOR<Grammar_test_foldersNullableScalarRelationFilter, grammar_test_foldersWhereInput> | null
@@ -13509,7 +13509,7 @@ export namespace Prisma {
     name?: SortOrder
     is_favorited?: SortOrder
     is_published?: SortOrder
-    tag?: SortOrder
+    tags?: SortOrder
     created_at?: SortOrder
     _count?: grammar_testsCountOrderByAggregateInput
     _max?: grammar_testsMaxOrderByAggregateInput
@@ -13526,7 +13526,7 @@ export namespace Prisma {
     name?: StringWithAggregatesFilter<"grammar_tests"> | string
     is_favorited?: BoolWithAggregatesFilter<"grammar_tests"> | boolean
     is_published?: BoolWithAggregatesFilter<"grammar_tests"> | boolean
-    tag?: StringNullableListFilter<"grammar_tests">
+    tags?: StringNullableListFilter<"grammar_tests">
     created_at?: DateTimeWithAggregatesFilter<"grammar_tests"> | Date | string
   }
 
@@ -13584,7 +13584,7 @@ export namespace Prisma {
     name?: StringFilter<"voca_files"> | string
     is_favorited?: BoolFilter<"voca_files"> | boolean
     is_published?: BoolFilter<"voca_files"> | boolean
-    tag?: StringNullableListFilter<"voca_files">
+    tags?: StringNullableListFilter<"voca_files">
     created_at?: DateTimeFilter<"voca_files"> | Date | string
     voca_file_test_links?: Voca_file_test_linksListRelationFilter
     voca_folders?: XOR<Voca_foldersNullableScalarRelationFilter, voca_foldersWhereInput> | null
@@ -13597,7 +13597,7 @@ export namespace Prisma {
     name?: SortOrder
     is_favorited?: SortOrder
     is_published?: SortOrder
-    tag?: SortOrder
+    tags?: SortOrder
     created_at?: SortOrder
     voca_file_test_links?: voca_file_test_linksOrderByRelationAggregateInput
     voca_folders?: voca_foldersOrderByWithRelationInput
@@ -13613,7 +13613,7 @@ export namespace Prisma {
     name?: StringFilter<"voca_files"> | string
     is_favorited?: BoolFilter<"voca_files"> | boolean
     is_published?: BoolFilter<"voca_files"> | boolean
-    tag?: StringNullableListFilter<"voca_files">
+    tags?: StringNullableListFilter<"voca_files">
     created_at?: DateTimeFilter<"voca_files"> | Date | string
     voca_file_test_links?: Voca_file_test_linksListRelationFilter
     voca_folders?: XOR<Voca_foldersNullableScalarRelationFilter, voca_foldersWhereInput> | null
@@ -13626,7 +13626,7 @@ export namespace Prisma {
     name?: SortOrder
     is_favorited?: SortOrder
     is_published?: SortOrder
-    tag?: SortOrder
+    tags?: SortOrder
     created_at?: SortOrder
     _count?: voca_filesCountOrderByAggregateInput
     _max?: voca_filesMaxOrderByAggregateInput
@@ -13643,7 +13643,7 @@ export namespace Prisma {
     name?: StringWithAggregatesFilter<"voca_files"> | string
     is_favorited?: BoolWithAggregatesFilter<"voca_files"> | boolean
     is_published?: BoolWithAggregatesFilter<"voca_files"> | boolean
-    tag?: StringNullableListFilter<"voca_files">
+    tags?: StringNullableListFilter<"voca_files">
     created_at?: DateTimeWithAggregatesFilter<"voca_files"> | Date | string
   }
 
@@ -13657,7 +13657,7 @@ export namespace Prisma {
     name?: StringFilter<"voca_folders"> | string
     is_favorited?: BoolFilter<"voca_folders"> | boolean
     is_published?: BoolFilter<"voca_folders"> | boolean
-    tag?: StringNullableListFilter<"voca_folders">
+    tags?: StringNullableListFilter<"voca_folders">
     created_at?: DateTimeFilter<"voca_folders"> | Date | string
     voca_files?: Voca_filesListRelationFilter
   }
@@ -13669,7 +13669,7 @@ export namespace Prisma {
     name?: SortOrder
     is_favorited?: SortOrder
     is_published?: SortOrder
-    tag?: SortOrder
+    tags?: SortOrder
     created_at?: SortOrder
     voca_files?: voca_filesOrderByRelationAggregateInput
   }
@@ -13684,7 +13684,7 @@ export namespace Prisma {
     name?: StringFilter<"voca_folders"> | string
     is_favorited?: BoolFilter<"voca_folders"> | boolean
     is_published?: BoolFilter<"voca_folders"> | boolean
-    tag?: StringNullableListFilter<"voca_folders">
+    tags?: StringNullableListFilter<"voca_folders">
     created_at?: DateTimeFilter<"voca_folders"> | Date | string
     voca_files?: Voca_filesListRelationFilter
   }, "id">
@@ -13696,7 +13696,7 @@ export namespace Prisma {
     name?: SortOrder
     is_favorited?: SortOrder
     is_published?: SortOrder
-    tag?: SortOrder
+    tags?: SortOrder
     created_at?: SortOrder
     _count?: voca_foldersCountOrderByAggregateInput
     _max?: voca_foldersMaxOrderByAggregateInput
@@ -13713,7 +13713,7 @@ export namespace Prisma {
     name?: StringWithAggregatesFilter<"voca_folders"> | string
     is_favorited?: BoolWithAggregatesFilter<"voca_folders"> | boolean
     is_published?: BoolWithAggregatesFilter<"voca_folders"> | boolean
-    tag?: StringNullableListFilter<"voca_folders">
+    tags?: StringNullableListFilter<"voca_folders">
     created_at?: DateTimeWithAggregatesFilter<"voca_folders"> | Date | string
   }
 
@@ -13727,7 +13727,7 @@ export namespace Prisma {
     name?: StringFilter<"voca_test_folders"> | string
     is_favorited?: BoolFilter<"voca_test_folders"> | boolean
     is_published?: BoolFilter<"voca_test_folders"> | boolean
-    tag?: StringNullableListFilter<"voca_test_folders">
+    tags?: StringNullableListFilter<"voca_test_folders">
     created_at?: DateTimeFilter<"voca_test_folders"> | Date | string
     voca_tests?: Voca_testsListRelationFilter
   }
@@ -13739,7 +13739,7 @@ export namespace Prisma {
     name?: SortOrder
     is_favorited?: SortOrder
     is_published?: SortOrder
-    tag?: SortOrder
+    tags?: SortOrder
     created_at?: SortOrder
     voca_tests?: voca_testsOrderByRelationAggregateInput
   }
@@ -13754,7 +13754,7 @@ export namespace Prisma {
     name?: StringFilter<"voca_test_folders"> | string
     is_favorited?: BoolFilter<"voca_test_folders"> | boolean
     is_published?: BoolFilter<"voca_test_folders"> | boolean
-    tag?: StringNullableListFilter<"voca_test_folders">
+    tags?: StringNullableListFilter<"voca_test_folders">
     created_at?: DateTimeFilter<"voca_test_folders"> | Date | string
     voca_tests?: Voca_testsListRelationFilter
   }, "id">
@@ -13766,7 +13766,7 @@ export namespace Prisma {
     name?: SortOrder
     is_favorited?: SortOrder
     is_published?: SortOrder
-    tag?: SortOrder
+    tags?: SortOrder
     created_at?: SortOrder
     _count?: voca_test_foldersCountOrderByAggregateInput
     _max?: voca_test_foldersMaxOrderByAggregateInput
@@ -13783,7 +13783,7 @@ export namespace Prisma {
     name?: StringWithAggregatesFilter<"voca_test_folders"> | string
     is_favorited?: BoolWithAggregatesFilter<"voca_test_folders"> | boolean
     is_published?: BoolWithAggregatesFilter<"voca_test_folders"> | boolean
-    tag?: StringNullableListFilter<"voca_test_folders">
+    tags?: StringNullableListFilter<"voca_test_folders">
     created_at?: DateTimeWithAggregatesFilter<"voca_test_folders"> | Date | string
   }
 
@@ -13900,7 +13900,7 @@ export namespace Prisma {
     name: string
     is_favorited?: boolean
     is_published?: boolean
-    tag?: grammar_filesCreatetagInput | string[]
+    tags?: grammar_filesCreatetagsInput | string[]
     created_at?: Date | string
     grammar_file_test_links?: grammar_file_test_linksCreateNestedManyWithoutGrammar_filesInput
     grammar_folders?: grammar_foldersCreateNestedOneWithoutGrammar_filesInput
@@ -13913,7 +13913,7 @@ export namespace Prisma {
     name: string
     is_favorited?: boolean
     is_published?: boolean
-    tag?: grammar_filesCreatetagInput | string[]
+    tags?: grammar_filesCreatetagsInput | string[]
     created_at?: Date | string
     grammar_file_test_links?: grammar_file_test_linksUncheckedCreateNestedManyWithoutGrammar_filesInput
   }
@@ -13924,7 +13924,7 @@ export namespace Prisma {
     name?: StringFieldUpdateOperationsInput | string
     is_favorited?: BoolFieldUpdateOperationsInput | boolean
     is_published?: BoolFieldUpdateOperationsInput | boolean
-    tag?: grammar_filesUpdatetagInput | string[]
+    tags?: grammar_filesUpdatetagsInput | string[]
     created_at?: DateTimeFieldUpdateOperationsInput | Date | string
     grammar_file_test_links?: grammar_file_test_linksUpdateManyWithoutGrammar_filesNestedInput
     grammar_folders?: grammar_foldersUpdateOneWithoutGrammar_filesNestedInput
@@ -13937,7 +13937,7 @@ export namespace Prisma {
     name?: StringFieldUpdateOperationsInput | string
     is_favorited?: BoolFieldUpdateOperationsInput | boolean
     is_published?: BoolFieldUpdateOperationsInput | boolean
-    tag?: grammar_filesUpdatetagInput | string[]
+    tags?: grammar_filesUpdatetagsInput | string[]
     created_at?: DateTimeFieldUpdateOperationsInput | Date | string
     grammar_file_test_links?: grammar_file_test_linksUncheckedUpdateManyWithoutGrammar_filesNestedInput
   }
@@ -13949,7 +13949,7 @@ export namespace Prisma {
     name: string
     is_favorited?: boolean
     is_published?: boolean
-    tag?: grammar_filesCreatetagInput | string[]
+    tags?: grammar_filesCreatetagsInput | string[]
     created_at?: Date | string
   }
 
@@ -13959,7 +13959,7 @@ export namespace Prisma {
     name?: StringFieldUpdateOperationsInput | string
     is_favorited?: BoolFieldUpdateOperationsInput | boolean
     is_published?: BoolFieldUpdateOperationsInput | boolean
-    tag?: grammar_filesUpdatetagInput | string[]
+    tags?: grammar_filesUpdatetagsInput | string[]
     created_at?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
@@ -13970,7 +13970,7 @@ export namespace Prisma {
     name?: StringFieldUpdateOperationsInput | string
     is_favorited?: BoolFieldUpdateOperationsInput | boolean
     is_published?: BoolFieldUpdateOperationsInput | boolean
-    tag?: grammar_filesUpdatetagInput | string[]
+    tags?: grammar_filesUpdatetagsInput | string[]
     created_at?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
@@ -13981,7 +13981,7 @@ export namespace Prisma {
     name: string
     is_favorited?: boolean
     is_published?: boolean
-    tag?: grammar_foldersCreatetagInput | string[]
+    tags?: grammar_foldersCreatetagsInput | string[]
     created_at?: Date | string
     grammar_files?: grammar_filesCreateNestedManyWithoutGrammar_foldersInput
   }
@@ -13993,7 +13993,7 @@ export namespace Prisma {
     name: string
     is_favorited?: boolean
     is_published?: boolean
-    tag?: grammar_foldersCreatetagInput | string[]
+    tags?: grammar_foldersCreatetagsInput | string[]
     created_at?: Date | string
     grammar_files?: grammar_filesUncheckedCreateNestedManyWithoutGrammar_foldersInput
   }
@@ -14005,7 +14005,7 @@ export namespace Prisma {
     name?: StringFieldUpdateOperationsInput | string
     is_favorited?: BoolFieldUpdateOperationsInput | boolean
     is_published?: BoolFieldUpdateOperationsInput | boolean
-    tag?: grammar_foldersUpdatetagInput | string[]
+    tags?: grammar_foldersUpdatetagsInput | string[]
     created_at?: DateTimeFieldUpdateOperationsInput | Date | string
     grammar_files?: grammar_filesUpdateManyWithoutGrammar_foldersNestedInput
   }
@@ -14017,7 +14017,7 @@ export namespace Prisma {
     name?: StringFieldUpdateOperationsInput | string
     is_favorited?: BoolFieldUpdateOperationsInput | boolean
     is_published?: BoolFieldUpdateOperationsInput | boolean
-    tag?: grammar_foldersUpdatetagInput | string[]
+    tags?: grammar_foldersUpdatetagsInput | string[]
     created_at?: DateTimeFieldUpdateOperationsInput | Date | string
     grammar_files?: grammar_filesUncheckedUpdateManyWithoutGrammar_foldersNestedInput
   }
@@ -14029,7 +14029,7 @@ export namespace Prisma {
     name: string
     is_favorited?: boolean
     is_published?: boolean
-    tag?: grammar_foldersCreatetagInput | string[]
+    tags?: grammar_foldersCreatetagsInput | string[]
     created_at?: Date | string
   }
 
@@ -14040,7 +14040,7 @@ export namespace Prisma {
     name?: StringFieldUpdateOperationsInput | string
     is_favorited?: BoolFieldUpdateOperationsInput | boolean
     is_published?: BoolFieldUpdateOperationsInput | boolean
-    tag?: grammar_foldersUpdatetagInput | string[]
+    tags?: grammar_foldersUpdatetagsInput | string[]
     created_at?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
@@ -14051,7 +14051,7 @@ export namespace Prisma {
     name?: StringFieldUpdateOperationsInput | string
     is_favorited?: BoolFieldUpdateOperationsInput | boolean
     is_published?: BoolFieldUpdateOperationsInput | boolean
-    tag?: grammar_foldersUpdatetagInput | string[]
+    tags?: grammar_foldersUpdatetagsInput | string[]
     created_at?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
@@ -14062,7 +14062,7 @@ export namespace Prisma {
     name: string
     is_favorited?: boolean
     is_published?: boolean
-    tag?: grammar_test_foldersCreatetagInput | string[]
+    tags?: grammar_test_foldersCreatetagsInput | string[]
     created_at?: Date | string
     grammar_tests?: grammar_testsCreateNestedManyWithoutGrammar_test_foldersInput
   }
@@ -14074,7 +14074,7 @@ export namespace Prisma {
     name: string
     is_favorited?: boolean
     is_published?: boolean
-    tag?: grammar_test_foldersCreatetagInput | string[]
+    tags?: grammar_test_foldersCreatetagsInput | string[]
     created_at?: Date | string
     grammar_tests?: grammar_testsUncheckedCreateNestedManyWithoutGrammar_test_foldersInput
   }
@@ -14086,7 +14086,7 @@ export namespace Prisma {
     name?: StringFieldUpdateOperationsInput | string
     is_favorited?: BoolFieldUpdateOperationsInput | boolean
     is_published?: BoolFieldUpdateOperationsInput | boolean
-    tag?: grammar_test_foldersUpdatetagInput | string[]
+    tags?: grammar_test_foldersUpdatetagsInput | string[]
     created_at?: DateTimeFieldUpdateOperationsInput | Date | string
     grammar_tests?: grammar_testsUpdateManyWithoutGrammar_test_foldersNestedInput
   }
@@ -14098,7 +14098,7 @@ export namespace Prisma {
     name?: StringFieldUpdateOperationsInput | string
     is_favorited?: BoolFieldUpdateOperationsInput | boolean
     is_published?: BoolFieldUpdateOperationsInput | boolean
-    tag?: grammar_test_foldersUpdatetagInput | string[]
+    tags?: grammar_test_foldersUpdatetagsInput | string[]
     created_at?: DateTimeFieldUpdateOperationsInput | Date | string
     grammar_tests?: grammar_testsUncheckedUpdateManyWithoutGrammar_test_foldersNestedInput
   }
@@ -14110,7 +14110,7 @@ export namespace Prisma {
     name: string
     is_favorited?: boolean
     is_published?: boolean
-    tag?: grammar_test_foldersCreatetagInput | string[]
+    tags?: grammar_test_foldersCreatetagsInput | string[]
     created_at?: Date | string
   }
 
@@ -14121,7 +14121,7 @@ export namespace Prisma {
     name?: StringFieldUpdateOperationsInput | string
     is_favorited?: BoolFieldUpdateOperationsInput | boolean
     is_published?: BoolFieldUpdateOperationsInput | boolean
-    tag?: grammar_test_foldersUpdatetagInput | string[]
+    tags?: grammar_test_foldersUpdatetagsInput | string[]
     created_at?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
@@ -14132,7 +14132,7 @@ export namespace Prisma {
     name?: StringFieldUpdateOperationsInput | string
     is_favorited?: BoolFieldUpdateOperationsInput | boolean
     is_published?: BoolFieldUpdateOperationsInput | boolean
-    tag?: grammar_test_foldersUpdatetagInput | string[]
+    tags?: grammar_test_foldersUpdatetagsInput | string[]
     created_at?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
@@ -14142,7 +14142,7 @@ export namespace Prisma {
     name: string
     is_favorited?: boolean
     is_published?: boolean
-    tag?: grammar_testsCreatetagInput | string[]
+    tags?: grammar_testsCreatetagsInput | string[]
     created_at?: Date | string
     grammar_file_test_links?: grammar_file_test_linksCreateNestedManyWithoutGrammar_testsInput
     grammar_test_folders?: grammar_test_foldersCreateNestedOneWithoutGrammar_testsInput
@@ -14155,7 +14155,7 @@ export namespace Prisma {
     name: string
     is_favorited?: boolean
     is_published?: boolean
-    tag?: grammar_testsCreatetagInput | string[]
+    tags?: grammar_testsCreatetagsInput | string[]
     created_at?: Date | string
     grammar_file_test_links?: grammar_file_test_linksUncheckedCreateNestedManyWithoutGrammar_testsInput
   }
@@ -14166,7 +14166,7 @@ export namespace Prisma {
     name?: StringFieldUpdateOperationsInput | string
     is_favorited?: BoolFieldUpdateOperationsInput | boolean
     is_published?: BoolFieldUpdateOperationsInput | boolean
-    tag?: grammar_testsUpdatetagInput | string[]
+    tags?: grammar_testsUpdatetagsInput | string[]
     created_at?: DateTimeFieldUpdateOperationsInput | Date | string
     grammar_file_test_links?: grammar_file_test_linksUpdateManyWithoutGrammar_testsNestedInput
     grammar_test_folders?: grammar_test_foldersUpdateOneWithoutGrammar_testsNestedInput
@@ -14179,7 +14179,7 @@ export namespace Prisma {
     name?: StringFieldUpdateOperationsInput | string
     is_favorited?: BoolFieldUpdateOperationsInput | boolean
     is_published?: BoolFieldUpdateOperationsInput | boolean
-    tag?: grammar_testsUpdatetagInput | string[]
+    tags?: grammar_testsUpdatetagsInput | string[]
     created_at?: DateTimeFieldUpdateOperationsInput | Date | string
     grammar_file_test_links?: grammar_file_test_linksUncheckedUpdateManyWithoutGrammar_testsNestedInput
   }
@@ -14191,7 +14191,7 @@ export namespace Prisma {
     name: string
     is_favorited?: boolean
     is_published?: boolean
-    tag?: grammar_testsCreatetagInput | string[]
+    tags?: grammar_testsCreatetagsInput | string[]
     created_at?: Date | string
   }
 
@@ -14201,7 +14201,7 @@ export namespace Prisma {
     name?: StringFieldUpdateOperationsInput | string
     is_favorited?: BoolFieldUpdateOperationsInput | boolean
     is_published?: BoolFieldUpdateOperationsInput | boolean
-    tag?: grammar_testsUpdatetagInput | string[]
+    tags?: grammar_testsUpdatetagsInput | string[]
     created_at?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
@@ -14212,7 +14212,7 @@ export namespace Prisma {
     name?: StringFieldUpdateOperationsInput | string
     is_favorited?: BoolFieldUpdateOperationsInput | boolean
     is_published?: BoolFieldUpdateOperationsInput | boolean
-    tag?: grammar_testsUpdatetagInput | string[]
+    tags?: grammar_testsUpdatetagsInput | string[]
     created_at?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
@@ -14256,7 +14256,7 @@ export namespace Prisma {
     name: string
     is_favorited?: boolean
     is_published?: boolean
-    tag?: voca_filesCreatetagInput | string[]
+    tags?: voca_filesCreatetagsInput | string[]
     created_at?: Date | string
     voca_file_test_links?: voca_file_test_linksCreateNestedManyWithoutVoca_filesInput
     voca_folders?: voca_foldersCreateNestedOneWithoutVoca_filesInput
@@ -14269,7 +14269,7 @@ export namespace Prisma {
     name: string
     is_favorited?: boolean
     is_published?: boolean
-    tag?: voca_filesCreatetagInput | string[]
+    tags?: voca_filesCreatetagsInput | string[]
     created_at?: Date | string
     voca_file_test_links?: voca_file_test_linksUncheckedCreateNestedManyWithoutVoca_filesInput
   }
@@ -14280,7 +14280,7 @@ export namespace Prisma {
     name?: StringFieldUpdateOperationsInput | string
     is_favorited?: BoolFieldUpdateOperationsInput | boolean
     is_published?: BoolFieldUpdateOperationsInput | boolean
-    tag?: voca_filesUpdatetagInput | string[]
+    tags?: voca_filesUpdatetagsInput | string[]
     created_at?: DateTimeFieldUpdateOperationsInput | Date | string
     voca_file_test_links?: voca_file_test_linksUpdateManyWithoutVoca_filesNestedInput
     voca_folders?: voca_foldersUpdateOneWithoutVoca_filesNestedInput
@@ -14293,7 +14293,7 @@ export namespace Prisma {
     name?: StringFieldUpdateOperationsInput | string
     is_favorited?: BoolFieldUpdateOperationsInput | boolean
     is_published?: BoolFieldUpdateOperationsInput | boolean
-    tag?: voca_filesUpdatetagInput | string[]
+    tags?: voca_filesUpdatetagsInput | string[]
     created_at?: DateTimeFieldUpdateOperationsInput | Date | string
     voca_file_test_links?: voca_file_test_linksUncheckedUpdateManyWithoutVoca_filesNestedInput
   }
@@ -14305,7 +14305,7 @@ export namespace Prisma {
     name: string
     is_favorited?: boolean
     is_published?: boolean
-    tag?: voca_filesCreatetagInput | string[]
+    tags?: voca_filesCreatetagsInput | string[]
     created_at?: Date | string
   }
 
@@ -14315,7 +14315,7 @@ export namespace Prisma {
     name?: StringFieldUpdateOperationsInput | string
     is_favorited?: BoolFieldUpdateOperationsInput | boolean
     is_published?: BoolFieldUpdateOperationsInput | boolean
-    tag?: voca_filesUpdatetagInput | string[]
+    tags?: voca_filesUpdatetagsInput | string[]
     created_at?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
@@ -14326,7 +14326,7 @@ export namespace Prisma {
     name?: StringFieldUpdateOperationsInput | string
     is_favorited?: BoolFieldUpdateOperationsInput | boolean
     is_published?: BoolFieldUpdateOperationsInput | boolean
-    tag?: voca_filesUpdatetagInput | string[]
+    tags?: voca_filesUpdatetagsInput | string[]
     created_at?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
@@ -14337,7 +14337,7 @@ export namespace Prisma {
     name: string
     is_favorited?: boolean
     is_published?: boolean
-    tag?: voca_foldersCreatetagInput | string[]
+    tags?: voca_foldersCreatetagsInput | string[]
     created_at?: Date | string
     voca_files?: voca_filesCreateNestedManyWithoutVoca_foldersInput
   }
@@ -14349,7 +14349,7 @@ export namespace Prisma {
     name: string
     is_favorited?: boolean
     is_published?: boolean
-    tag?: voca_foldersCreatetagInput | string[]
+    tags?: voca_foldersCreatetagsInput | string[]
     created_at?: Date | string
     voca_files?: voca_filesUncheckedCreateNestedManyWithoutVoca_foldersInput
   }
@@ -14361,7 +14361,7 @@ export namespace Prisma {
     name?: StringFieldUpdateOperationsInput | string
     is_favorited?: BoolFieldUpdateOperationsInput | boolean
     is_published?: BoolFieldUpdateOperationsInput | boolean
-    tag?: voca_foldersUpdatetagInput | string[]
+    tags?: voca_foldersUpdatetagsInput | string[]
     created_at?: DateTimeFieldUpdateOperationsInput | Date | string
     voca_files?: voca_filesUpdateManyWithoutVoca_foldersNestedInput
   }
@@ -14373,7 +14373,7 @@ export namespace Prisma {
     name?: StringFieldUpdateOperationsInput | string
     is_favorited?: BoolFieldUpdateOperationsInput | boolean
     is_published?: BoolFieldUpdateOperationsInput | boolean
-    tag?: voca_foldersUpdatetagInput | string[]
+    tags?: voca_foldersUpdatetagsInput | string[]
     created_at?: DateTimeFieldUpdateOperationsInput | Date | string
     voca_files?: voca_filesUncheckedUpdateManyWithoutVoca_foldersNestedInput
   }
@@ -14385,7 +14385,7 @@ export namespace Prisma {
     name: string
     is_favorited?: boolean
     is_published?: boolean
-    tag?: voca_foldersCreatetagInput | string[]
+    tags?: voca_foldersCreatetagsInput | string[]
     created_at?: Date | string
   }
 
@@ -14396,7 +14396,7 @@ export namespace Prisma {
     name?: StringFieldUpdateOperationsInput | string
     is_favorited?: BoolFieldUpdateOperationsInput | boolean
     is_published?: BoolFieldUpdateOperationsInput | boolean
-    tag?: voca_foldersUpdatetagInput | string[]
+    tags?: voca_foldersUpdatetagsInput | string[]
     created_at?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
@@ -14407,7 +14407,7 @@ export namespace Prisma {
     name?: StringFieldUpdateOperationsInput | string
     is_favorited?: BoolFieldUpdateOperationsInput | boolean
     is_published?: BoolFieldUpdateOperationsInput | boolean
-    tag?: voca_foldersUpdatetagInput | string[]
+    tags?: voca_foldersUpdatetagsInput | string[]
     created_at?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
@@ -14418,7 +14418,7 @@ export namespace Prisma {
     name: string
     is_favorited?: boolean
     is_published?: boolean
-    tag?: voca_test_foldersCreatetagInput | string[]
+    tags?: voca_test_foldersCreatetagsInput | string[]
     created_at?: Date | string
     voca_tests?: voca_testsCreateNestedManyWithoutVoca_test_foldersInput
   }
@@ -14430,7 +14430,7 @@ export namespace Prisma {
     name: string
     is_favorited?: boolean
     is_published?: boolean
-    tag?: voca_test_foldersCreatetagInput | string[]
+    tags?: voca_test_foldersCreatetagsInput | string[]
     created_at?: Date | string
     voca_tests?: voca_testsUncheckedCreateNestedManyWithoutVoca_test_foldersInput
   }
@@ -14442,7 +14442,7 @@ export namespace Prisma {
     name?: StringFieldUpdateOperationsInput | string
     is_favorited?: BoolFieldUpdateOperationsInput | boolean
     is_published?: BoolFieldUpdateOperationsInput | boolean
-    tag?: voca_test_foldersUpdatetagInput | string[]
+    tags?: voca_test_foldersUpdatetagsInput | string[]
     created_at?: DateTimeFieldUpdateOperationsInput | Date | string
     voca_tests?: voca_testsUpdateManyWithoutVoca_test_foldersNestedInput
   }
@@ -14454,7 +14454,7 @@ export namespace Prisma {
     name?: StringFieldUpdateOperationsInput | string
     is_favorited?: BoolFieldUpdateOperationsInput | boolean
     is_published?: BoolFieldUpdateOperationsInput | boolean
-    tag?: voca_test_foldersUpdatetagInput | string[]
+    tags?: voca_test_foldersUpdatetagsInput | string[]
     created_at?: DateTimeFieldUpdateOperationsInput | Date | string
     voca_tests?: voca_testsUncheckedUpdateManyWithoutVoca_test_foldersNestedInput
   }
@@ -14466,7 +14466,7 @@ export namespace Prisma {
     name: string
     is_favorited?: boolean
     is_published?: boolean
-    tag?: voca_test_foldersCreatetagInput | string[]
+    tags?: voca_test_foldersCreatetagsInput | string[]
     created_at?: Date | string
   }
 
@@ -14477,7 +14477,7 @@ export namespace Prisma {
     name?: StringFieldUpdateOperationsInput | string
     is_favorited?: BoolFieldUpdateOperationsInput | boolean
     is_published?: BoolFieldUpdateOperationsInput | boolean
-    tag?: voca_test_foldersUpdatetagInput | string[]
+    tags?: voca_test_foldersUpdatetagsInput | string[]
     created_at?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
@@ -14488,7 +14488,7 @@ export namespace Prisma {
     name?: StringFieldUpdateOperationsInput | string
     is_favorited?: BoolFieldUpdateOperationsInput | boolean
     is_published?: BoolFieldUpdateOperationsInput | boolean
-    tag?: voca_test_foldersUpdatetagInput | string[]
+    tags?: voca_test_foldersUpdatetagsInput | string[]
     created_at?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
@@ -14707,7 +14707,7 @@ export namespace Prisma {
     name?: SortOrder
     is_favorited?: SortOrder
     is_published?: SortOrder
-    tag?: SortOrder
+    tags?: SortOrder
     created_at?: SortOrder
   }
 
@@ -14803,7 +14803,7 @@ export namespace Prisma {
     name?: SortOrder
     is_favorited?: SortOrder
     is_published?: SortOrder
-    tag?: SortOrder
+    tags?: SortOrder
     created_at?: SortOrder
   }
 
@@ -14844,7 +14844,7 @@ export namespace Prisma {
     name?: SortOrder
     is_favorited?: SortOrder
     is_published?: SortOrder
-    tag?: SortOrder
+    tags?: SortOrder
     created_at?: SortOrder
   }
 
@@ -14880,7 +14880,7 @@ export namespace Prisma {
     name?: SortOrder
     is_favorited?: SortOrder
     is_published?: SortOrder
-    tag?: SortOrder
+    tags?: SortOrder
     created_at?: SortOrder
   }
 
@@ -14956,7 +14956,7 @@ export namespace Prisma {
     name?: SortOrder
     is_favorited?: SortOrder
     is_published?: SortOrder
-    tag?: SortOrder
+    tags?: SortOrder
     created_at?: SortOrder
   }
 
@@ -14997,7 +14997,7 @@ export namespace Prisma {
     name?: SortOrder
     is_favorited?: SortOrder
     is_published?: SortOrder
-    tag?: SortOrder
+    tags?: SortOrder
     created_at?: SortOrder
   }
 
@@ -15038,7 +15038,7 @@ export namespace Prisma {
     name?: SortOrder
     is_favorited?: SortOrder
     is_published?: SortOrder
-    tag?: SortOrder
+    tags?: SortOrder
     created_at?: SortOrder
   }
 
@@ -15130,7 +15130,7 @@ export namespace Prisma {
     set?: string
   }
 
-  export type grammar_filesCreatetagInput = {
+  export type grammar_filesCreatetagsInput = {
     set: string[]
   }
 
@@ -15158,7 +15158,7 @@ export namespace Prisma {
     set?: boolean
   }
 
-  export type grammar_filesUpdatetagInput = {
+  export type grammar_filesUpdatetagsInput = {
     set?: string[]
     push?: string | string[]
   }
@@ -15209,7 +15209,7 @@ export namespace Prisma {
     deleteMany?: grammar_file_test_linksScalarWhereInput | grammar_file_test_linksScalarWhereInput[]
   }
 
-  export type grammar_foldersCreatetagInput = {
+  export type grammar_foldersCreatetagsInput = {
     set: string[]
   }
 
@@ -15227,7 +15227,7 @@ export namespace Prisma {
     connect?: grammar_filesWhereUniqueInput | grammar_filesWhereUniqueInput[]
   }
 
-  export type grammar_foldersUpdatetagInput = {
+  export type grammar_foldersUpdatetagsInput = {
     set?: string[]
     push?: string | string[]
   }
@@ -15260,7 +15260,7 @@ export namespace Prisma {
     deleteMany?: grammar_filesScalarWhereInput | grammar_filesScalarWhereInput[]
   }
 
-  export type grammar_test_foldersCreatetagInput = {
+  export type grammar_test_foldersCreatetagsInput = {
     set: string[]
   }
 
@@ -15278,7 +15278,7 @@ export namespace Prisma {
     connect?: grammar_testsWhereUniqueInput | grammar_testsWhereUniqueInput[]
   }
 
-  export type grammar_test_foldersUpdatetagInput = {
+  export type grammar_test_foldersUpdatetagsInput = {
     set?: string[]
     push?: string | string[]
   }
@@ -15311,7 +15311,7 @@ export namespace Prisma {
     deleteMany?: grammar_testsScalarWhereInput | grammar_testsScalarWhereInput[]
   }
 
-  export type grammar_testsCreatetagInput = {
+  export type grammar_testsCreatetagsInput = {
     set: string[]
   }
 
@@ -15335,7 +15335,7 @@ export namespace Prisma {
     connect?: grammar_file_test_linksWhereUniqueInput | grammar_file_test_linksWhereUniqueInput[]
   }
 
-  export type grammar_testsUpdatetagInput = {
+  export type grammar_testsUpdatetagsInput = {
     set?: string[]
     push?: string | string[]
   }
@@ -15406,7 +15406,7 @@ export namespace Prisma {
     update?: XOR<XOR<voca_filesUpdateToOneWithWhereWithoutVoca_file_test_linksInput, voca_filesUpdateWithoutVoca_file_test_linksInput>, voca_filesUncheckedUpdateWithoutVoca_file_test_linksInput>
   }
 
-  export type voca_filesCreatetagInput = {
+  export type voca_filesCreatetagsInput = {
     set: string[]
   }
 
@@ -15430,7 +15430,7 @@ export namespace Prisma {
     connect?: voca_file_test_linksWhereUniqueInput | voca_file_test_linksWhereUniqueInput[]
   }
 
-  export type voca_filesUpdatetagInput = {
+  export type voca_filesUpdatetagsInput = {
     set?: string[]
     push?: string | string[]
   }
@@ -15473,7 +15473,7 @@ export namespace Prisma {
     deleteMany?: voca_file_test_linksScalarWhereInput | voca_file_test_linksScalarWhereInput[]
   }
 
-  export type voca_foldersCreatetagInput = {
+  export type voca_foldersCreatetagsInput = {
     set: string[]
   }
 
@@ -15491,7 +15491,7 @@ export namespace Prisma {
     connect?: voca_filesWhereUniqueInput | voca_filesWhereUniqueInput[]
   }
 
-  export type voca_foldersUpdatetagInput = {
+  export type voca_foldersUpdatetagsInput = {
     set?: string[]
     push?: string | string[]
   }
@@ -15524,7 +15524,7 @@ export namespace Prisma {
     deleteMany?: voca_filesScalarWhereInput | voca_filesScalarWhereInput[]
   }
 
-  export type voca_test_foldersCreatetagInput = {
+  export type voca_test_foldersCreatetagsInput = {
     set: string[]
   }
 
@@ -15542,7 +15542,7 @@ export namespace Prisma {
     connect?: voca_testsWhereUniqueInput | voca_testsWhereUniqueInput[]
   }
 
-  export type voca_test_foldersUpdatetagInput = {
+  export type voca_test_foldersUpdatetagsInput = {
     set?: string[]
     push?: string | string[]
   }
@@ -15803,7 +15803,7 @@ export namespace Prisma {
     name: string
     is_favorited?: boolean
     is_published?: boolean
-    tag?: grammar_filesCreatetagInput | string[]
+    tags?: grammar_filesCreatetagsInput | string[]
     created_at?: Date | string
     grammar_folders?: grammar_foldersCreateNestedOneWithoutGrammar_filesInput
   }
@@ -15815,7 +15815,7 @@ export namespace Prisma {
     name: string
     is_favorited?: boolean
     is_published?: boolean
-    tag?: grammar_filesCreatetagInput | string[]
+    tags?: grammar_filesCreatetagsInput | string[]
     created_at?: Date | string
   }
 
@@ -15830,7 +15830,7 @@ export namespace Prisma {
     name: string
     is_favorited?: boolean
     is_published?: boolean
-    tag?: grammar_testsCreatetagInput | string[]
+    tags?: grammar_testsCreatetagsInput | string[]
     created_at?: Date | string
     grammar_test_folders?: grammar_test_foldersCreateNestedOneWithoutGrammar_testsInput
   }
@@ -15842,7 +15842,7 @@ export namespace Prisma {
     name: string
     is_favorited?: boolean
     is_published?: boolean
-    tag?: grammar_testsCreatetagInput | string[]
+    tags?: grammar_testsCreatetagsInput | string[]
     created_at?: Date | string
   }
 
@@ -15868,7 +15868,7 @@ export namespace Prisma {
     name?: StringFieldUpdateOperationsInput | string
     is_favorited?: BoolFieldUpdateOperationsInput | boolean
     is_published?: BoolFieldUpdateOperationsInput | boolean
-    tag?: grammar_filesUpdatetagInput | string[]
+    tags?: grammar_filesUpdatetagsInput | string[]
     created_at?: DateTimeFieldUpdateOperationsInput | Date | string
     grammar_folders?: grammar_foldersUpdateOneWithoutGrammar_filesNestedInput
   }
@@ -15880,7 +15880,7 @@ export namespace Prisma {
     name?: StringFieldUpdateOperationsInput | string
     is_favorited?: BoolFieldUpdateOperationsInput | boolean
     is_published?: BoolFieldUpdateOperationsInput | boolean
-    tag?: grammar_filesUpdatetagInput | string[]
+    tags?: grammar_filesUpdatetagsInput | string[]
     created_at?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
@@ -15901,7 +15901,7 @@ export namespace Prisma {
     name?: StringFieldUpdateOperationsInput | string
     is_favorited?: BoolFieldUpdateOperationsInput | boolean
     is_published?: BoolFieldUpdateOperationsInput | boolean
-    tag?: grammar_testsUpdatetagInput | string[]
+    tags?: grammar_testsUpdatetagsInput | string[]
     created_at?: DateTimeFieldUpdateOperationsInput | Date | string
     grammar_test_folders?: grammar_test_foldersUpdateOneWithoutGrammar_testsNestedInput
   }
@@ -15913,7 +15913,7 @@ export namespace Prisma {
     name?: StringFieldUpdateOperationsInput | string
     is_favorited?: BoolFieldUpdateOperationsInput | boolean
     is_published?: BoolFieldUpdateOperationsInput | boolean
-    tag?: grammar_testsUpdatetagInput | string[]
+    tags?: grammar_testsUpdatetagsInput | string[]
     created_at?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
@@ -15942,7 +15942,7 @@ export namespace Prisma {
     name: string
     is_favorited?: boolean
     is_published?: boolean
-    tag?: grammar_foldersCreatetagInput | string[]
+    tags?: grammar_foldersCreatetagsInput | string[]
     created_at?: Date | string
   }
 
@@ -15953,7 +15953,7 @@ export namespace Prisma {
     name: string
     is_favorited?: boolean
     is_published?: boolean
-    tag?: grammar_foldersCreatetagInput | string[]
+    tags?: grammar_foldersCreatetagsInput | string[]
     created_at?: Date | string
   }
 
@@ -16004,7 +16004,7 @@ export namespace Prisma {
     name?: StringFieldUpdateOperationsInput | string
     is_favorited?: BoolFieldUpdateOperationsInput | boolean
     is_published?: BoolFieldUpdateOperationsInput | boolean
-    tag?: grammar_foldersUpdatetagInput | string[]
+    tags?: grammar_foldersUpdatetagsInput | string[]
     created_at?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
@@ -16015,7 +16015,7 @@ export namespace Prisma {
     name?: StringFieldUpdateOperationsInput | string
     is_favorited?: BoolFieldUpdateOperationsInput | boolean
     is_published?: BoolFieldUpdateOperationsInput | boolean
-    tag?: grammar_foldersUpdatetagInput | string[]
+    tags?: grammar_foldersUpdatetagsInput | string[]
     created_at?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
@@ -16025,7 +16025,7 @@ export namespace Prisma {
     name: string
     is_favorited?: boolean
     is_published?: boolean
-    tag?: grammar_filesCreatetagInput | string[]
+    tags?: grammar_filesCreatetagsInput | string[]
     created_at?: Date | string
     grammar_file_test_links?: grammar_file_test_linksCreateNestedManyWithoutGrammar_filesInput
   }
@@ -16036,7 +16036,7 @@ export namespace Prisma {
     name: string
     is_favorited?: boolean
     is_published?: boolean
-    tag?: grammar_filesCreatetagInput | string[]
+    tags?: grammar_filesCreatetagsInput | string[]
     created_at?: Date | string
     grammar_file_test_links?: grammar_file_test_linksUncheckedCreateNestedManyWithoutGrammar_filesInput
   }
@@ -16077,7 +16077,7 @@ export namespace Prisma {
     name?: StringFilter<"grammar_files"> | string
     is_favorited?: BoolFilter<"grammar_files"> | boolean
     is_published?: BoolFilter<"grammar_files"> | boolean
-    tag?: StringNullableListFilter<"grammar_files">
+    tags?: StringNullableListFilter<"grammar_files">
     created_at?: DateTimeFilter<"grammar_files"> | Date | string
   }
 
@@ -16087,7 +16087,7 @@ export namespace Prisma {
     name: string
     is_favorited?: boolean
     is_published?: boolean
-    tag?: grammar_testsCreatetagInput | string[]
+    tags?: grammar_testsCreatetagsInput | string[]
     created_at?: Date | string
     grammar_file_test_links?: grammar_file_test_linksCreateNestedManyWithoutGrammar_testsInput
   }
@@ -16098,7 +16098,7 @@ export namespace Prisma {
     name: string
     is_favorited?: boolean
     is_published?: boolean
-    tag?: grammar_testsCreatetagInput | string[]
+    tags?: grammar_testsCreatetagsInput | string[]
     created_at?: Date | string
     grammar_file_test_links?: grammar_file_test_linksUncheckedCreateNestedManyWithoutGrammar_testsInput
   }
@@ -16139,7 +16139,7 @@ export namespace Prisma {
     name?: StringFilter<"grammar_tests"> | string
     is_favorited?: BoolFilter<"grammar_tests"> | boolean
     is_published?: BoolFilter<"grammar_tests"> | boolean
-    tag?: StringNullableListFilter<"grammar_tests">
+    tags?: StringNullableListFilter<"grammar_tests">
     created_at?: DateTimeFilter<"grammar_tests"> | Date | string
   }
 
@@ -16168,7 +16168,7 @@ export namespace Prisma {
     name: string
     is_favorited?: boolean
     is_published?: boolean
-    tag?: grammar_test_foldersCreatetagInput | string[]
+    tags?: grammar_test_foldersCreatetagsInput | string[]
     created_at?: Date | string
   }
 
@@ -16179,7 +16179,7 @@ export namespace Prisma {
     name: string
     is_favorited?: boolean
     is_published?: boolean
-    tag?: grammar_test_foldersCreatetagInput | string[]
+    tags?: grammar_test_foldersCreatetagsInput | string[]
     created_at?: Date | string
   }
 
@@ -16222,7 +16222,7 @@ export namespace Prisma {
     name?: StringFieldUpdateOperationsInput | string
     is_favorited?: BoolFieldUpdateOperationsInput | boolean
     is_published?: BoolFieldUpdateOperationsInput | boolean
-    tag?: grammar_test_foldersUpdatetagInput | string[]
+    tags?: grammar_test_foldersUpdatetagsInput | string[]
     created_at?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
@@ -16233,7 +16233,7 @@ export namespace Prisma {
     name?: StringFieldUpdateOperationsInput | string
     is_favorited?: BoolFieldUpdateOperationsInput | boolean
     is_published?: BoolFieldUpdateOperationsInput | boolean
-    tag?: grammar_test_foldersUpdatetagInput | string[]
+    tags?: grammar_test_foldersUpdatetagsInput | string[]
     created_at?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
@@ -16270,7 +16270,7 @@ export namespace Prisma {
     name: string
     is_favorited?: boolean
     is_published?: boolean
-    tag?: voca_filesCreatetagInput | string[]
+    tags?: voca_filesCreatetagsInput | string[]
     created_at?: Date | string
     voca_folders?: voca_foldersCreateNestedOneWithoutVoca_filesInput
   }
@@ -16282,7 +16282,7 @@ export namespace Prisma {
     name: string
     is_favorited?: boolean
     is_published?: boolean
-    tag?: voca_filesCreatetagInput | string[]
+    tags?: voca_filesCreatetagsInput | string[]
     created_at?: Date | string
   }
 
@@ -16341,7 +16341,7 @@ export namespace Prisma {
     name?: StringFieldUpdateOperationsInput | string
     is_favorited?: BoolFieldUpdateOperationsInput | boolean
     is_published?: BoolFieldUpdateOperationsInput | boolean
-    tag?: voca_filesUpdatetagInput | string[]
+    tags?: voca_filesUpdatetagsInput | string[]
     created_at?: DateTimeFieldUpdateOperationsInput | Date | string
     voca_folders?: voca_foldersUpdateOneWithoutVoca_filesNestedInput
   }
@@ -16353,7 +16353,7 @@ export namespace Prisma {
     name?: StringFieldUpdateOperationsInput | string
     is_favorited?: BoolFieldUpdateOperationsInput | boolean
     is_published?: BoolFieldUpdateOperationsInput | boolean
-    tag?: voca_filesUpdatetagInput | string[]
+    tags?: voca_filesUpdatetagsInput | string[]
     created_at?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
@@ -16382,7 +16382,7 @@ export namespace Prisma {
     name: string
     is_favorited?: boolean
     is_published?: boolean
-    tag?: voca_foldersCreatetagInput | string[]
+    tags?: voca_foldersCreatetagsInput | string[]
     created_at?: Date | string
   }
 
@@ -16393,7 +16393,7 @@ export namespace Prisma {
     name: string
     is_favorited?: boolean
     is_published?: boolean
-    tag?: voca_foldersCreatetagInput | string[]
+    tags?: voca_foldersCreatetagsInput | string[]
     created_at?: Date | string
   }
 
@@ -16444,7 +16444,7 @@ export namespace Prisma {
     name?: StringFieldUpdateOperationsInput | string
     is_favorited?: BoolFieldUpdateOperationsInput | boolean
     is_published?: BoolFieldUpdateOperationsInput | boolean
-    tag?: voca_foldersUpdatetagInput | string[]
+    tags?: voca_foldersUpdatetagsInput | string[]
     created_at?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
@@ -16455,7 +16455,7 @@ export namespace Prisma {
     name?: StringFieldUpdateOperationsInput | string
     is_favorited?: BoolFieldUpdateOperationsInput | boolean
     is_published?: BoolFieldUpdateOperationsInput | boolean
-    tag?: voca_foldersUpdatetagInput | string[]
+    tags?: voca_foldersUpdatetagsInput | string[]
     created_at?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
@@ -16465,7 +16465,7 @@ export namespace Prisma {
     name: string
     is_favorited?: boolean
     is_published?: boolean
-    tag?: voca_filesCreatetagInput | string[]
+    tags?: voca_filesCreatetagsInput | string[]
     created_at?: Date | string
     voca_file_test_links?: voca_file_test_linksCreateNestedManyWithoutVoca_filesInput
   }
@@ -16476,7 +16476,7 @@ export namespace Prisma {
     name: string
     is_favorited?: boolean
     is_published?: boolean
-    tag?: voca_filesCreatetagInput | string[]
+    tags?: voca_filesCreatetagsInput | string[]
     created_at?: Date | string
     voca_file_test_links?: voca_file_test_linksUncheckedCreateNestedManyWithoutVoca_filesInput
   }
@@ -16517,7 +16517,7 @@ export namespace Prisma {
     name?: StringFilter<"voca_files"> | string
     is_favorited?: BoolFilter<"voca_files"> | boolean
     is_published?: BoolFilter<"voca_files"> | boolean
-    tag?: StringNullableListFilter<"voca_files">
+    tags?: StringNullableListFilter<"voca_files">
     created_at?: DateTimeFilter<"voca_files"> | Date | string
   }
 
@@ -16608,7 +16608,7 @@ export namespace Prisma {
     name: string
     is_favorited?: boolean
     is_published?: boolean
-    tag?: voca_test_foldersCreatetagInput | string[]
+    tags?: voca_test_foldersCreatetagsInput | string[]
     created_at?: Date | string
   }
 
@@ -16619,7 +16619,7 @@ export namespace Prisma {
     name: string
     is_favorited?: boolean
     is_published?: boolean
-    tag?: voca_test_foldersCreatetagInput | string[]
+    tags?: voca_test_foldersCreatetagsInput | string[]
     created_at?: Date | string
   }
 
@@ -16662,7 +16662,7 @@ export namespace Prisma {
     name?: StringFieldUpdateOperationsInput | string
     is_favorited?: BoolFieldUpdateOperationsInput | boolean
     is_published?: BoolFieldUpdateOperationsInput | boolean
-    tag?: voca_test_foldersUpdatetagInput | string[]
+    tags?: voca_test_foldersUpdatetagsInput | string[]
     created_at?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
@@ -16673,7 +16673,7 @@ export namespace Prisma {
     name?: StringFieldUpdateOperationsInput | string
     is_favorited?: BoolFieldUpdateOperationsInput | boolean
     is_published?: BoolFieldUpdateOperationsInput | boolean
-    tag?: voca_test_foldersUpdatetagInput | string[]
+    tags?: voca_test_foldersUpdatetagsInput | string[]
     created_at?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
@@ -16699,7 +16699,7 @@ export namespace Prisma {
     name: string
     is_favorited?: boolean
     is_published?: boolean
-    tag?: grammar_filesCreatetagInput | string[]
+    tags?: grammar_filesCreatetagsInput | string[]
     created_at?: Date | string
   }
 
@@ -16709,7 +16709,7 @@ export namespace Prisma {
     name?: StringFieldUpdateOperationsInput | string
     is_favorited?: BoolFieldUpdateOperationsInput | boolean
     is_published?: BoolFieldUpdateOperationsInput | boolean
-    tag?: grammar_filesUpdatetagInput | string[]
+    tags?: grammar_filesUpdatetagsInput | string[]
     created_at?: DateTimeFieldUpdateOperationsInput | Date | string
     grammar_file_test_links?: grammar_file_test_linksUpdateManyWithoutGrammar_filesNestedInput
   }
@@ -16720,7 +16720,7 @@ export namespace Prisma {
     name?: StringFieldUpdateOperationsInput | string
     is_favorited?: BoolFieldUpdateOperationsInput | boolean
     is_published?: BoolFieldUpdateOperationsInput | boolean
-    tag?: grammar_filesUpdatetagInput | string[]
+    tags?: grammar_filesUpdatetagsInput | string[]
     created_at?: DateTimeFieldUpdateOperationsInput | Date | string
     grammar_file_test_links?: grammar_file_test_linksUncheckedUpdateManyWithoutGrammar_filesNestedInput
   }
@@ -16731,7 +16731,7 @@ export namespace Prisma {
     name?: StringFieldUpdateOperationsInput | string
     is_favorited?: BoolFieldUpdateOperationsInput | boolean
     is_published?: BoolFieldUpdateOperationsInput | boolean
-    tag?: grammar_filesUpdatetagInput | string[]
+    tags?: grammar_filesUpdatetagsInput | string[]
     created_at?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
@@ -16741,7 +16741,7 @@ export namespace Prisma {
     name: string
     is_favorited?: boolean
     is_published?: boolean
-    tag?: grammar_testsCreatetagInput | string[]
+    tags?: grammar_testsCreatetagsInput | string[]
     created_at?: Date | string
   }
 
@@ -16751,7 +16751,7 @@ export namespace Prisma {
     name?: StringFieldUpdateOperationsInput | string
     is_favorited?: BoolFieldUpdateOperationsInput | boolean
     is_published?: BoolFieldUpdateOperationsInput | boolean
-    tag?: grammar_testsUpdatetagInput | string[]
+    tags?: grammar_testsUpdatetagsInput | string[]
     created_at?: DateTimeFieldUpdateOperationsInput | Date | string
     grammar_file_test_links?: grammar_file_test_linksUpdateManyWithoutGrammar_testsNestedInput
   }
@@ -16762,7 +16762,7 @@ export namespace Prisma {
     name?: StringFieldUpdateOperationsInput | string
     is_favorited?: BoolFieldUpdateOperationsInput | boolean
     is_published?: BoolFieldUpdateOperationsInput | boolean
-    tag?: grammar_testsUpdatetagInput | string[]
+    tags?: grammar_testsUpdatetagsInput | string[]
     created_at?: DateTimeFieldUpdateOperationsInput | Date | string
     grammar_file_test_links?: grammar_file_test_linksUncheckedUpdateManyWithoutGrammar_testsNestedInput
   }
@@ -16773,7 +16773,7 @@ export namespace Prisma {
     name?: StringFieldUpdateOperationsInput | string
     is_favorited?: BoolFieldUpdateOperationsInput | boolean
     is_published?: BoolFieldUpdateOperationsInput | boolean
-    tag?: grammar_testsUpdatetagInput | string[]
+    tags?: grammar_testsUpdatetagsInput | string[]
     created_at?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
@@ -16815,7 +16815,7 @@ export namespace Prisma {
     name: string
     is_favorited?: boolean
     is_published?: boolean
-    tag?: voca_filesCreatetagInput | string[]
+    tags?: voca_filesCreatetagsInput | string[]
     created_at?: Date | string
   }
 
@@ -16825,7 +16825,7 @@ export namespace Prisma {
     name?: StringFieldUpdateOperationsInput | string
     is_favorited?: BoolFieldUpdateOperationsInput | boolean
     is_published?: BoolFieldUpdateOperationsInput | boolean
-    tag?: voca_filesUpdatetagInput | string[]
+    tags?: voca_filesUpdatetagsInput | string[]
     created_at?: DateTimeFieldUpdateOperationsInput | Date | string
     voca_file_test_links?: voca_file_test_linksUpdateManyWithoutVoca_filesNestedInput
   }
@@ -16836,7 +16836,7 @@ export namespace Prisma {
     name?: StringFieldUpdateOperationsInput | string
     is_favorited?: BoolFieldUpdateOperationsInput | boolean
     is_published?: BoolFieldUpdateOperationsInput | boolean
-    tag?: voca_filesUpdatetagInput | string[]
+    tags?: voca_filesUpdatetagsInput | string[]
     created_at?: DateTimeFieldUpdateOperationsInput | Date | string
     voca_file_test_links?: voca_file_test_linksUncheckedUpdateManyWithoutVoca_filesNestedInput
   }
@@ -16847,7 +16847,7 @@ export namespace Prisma {
     name?: StringFieldUpdateOperationsInput | string
     is_favorited?: BoolFieldUpdateOperationsInput | boolean
     is_published?: BoolFieldUpdateOperationsInput | boolean
-    tag?: voca_filesUpdatetagInput | string[]
+    tags?: voca_filesUpdatetagsInput | string[]
     created_at?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
