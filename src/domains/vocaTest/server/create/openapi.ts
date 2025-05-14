@@ -1,8 +1,8 @@
 import { OpenAPIRegistry } from '@asteasolutions/zod-to-openapi';
-import { resourceResponseSchema } from '@/server/base/schemas/resource';
+import { resourceResponseSchema } from '@/server/schemas/createResource';
 import { createVocaTestRequestSchema } from './schema';
 
-export const registerVocaTestSchemas = (registry: OpenAPIRegistry) => {
+export const registerCreateVocaTestSchemas = (registry: OpenAPIRegistry) => {
   registry.register('CreateVocaTestRequest', createVocaTestRequestSchema);
 
   registry.registerPath({

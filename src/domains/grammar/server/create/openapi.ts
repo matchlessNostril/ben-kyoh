@@ -1,8 +1,8 @@
 import { OpenAPIRegistry } from '@asteasolutions/zod-to-openapi';
-import { resourceResponseSchema } from '@/server/base/schemas/resource';
+import { resourceResponseSchema } from '@/server/schemas/createResource';
 import { createGrammarRequestSchema } from './schema';
 
-export const registerGrammarSchemas = (registry: OpenAPIRegistry) => {
+export const registerCreateGrammarSchemas = (registry: OpenAPIRegistry) => {
   registry.register('CreateGrammarRequest', createGrammarRequestSchema);
 
   registry.registerPath({

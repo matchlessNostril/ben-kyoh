@@ -1,8 +1,8 @@
 import { OpenAPIRegistry } from '@asteasolutions/zod-to-openapi';
-import { resourceResponseSchema } from '@/server/base/schemas/resource';
+import { resourceResponseSchema } from '@/server/schemas/createResource';
 import { createFolderRequestSchema } from './schema';
 
-export const registerFolderSchemas = (registry: OpenAPIRegistry) => {
+export const registerCreateFolderSchemas = (registry: OpenAPIRegistry) => {
   registry.register('CreateFolderRequest', createFolderRequestSchema);
 
   registry.registerPath({

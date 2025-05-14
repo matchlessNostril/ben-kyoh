@@ -1,26 +1,8 @@
-import { prisma } from '@/server/db/client';
 import { CreateFolderRequestType } from './schema';
-
-const modelMap = {
-  voca_library: 'voca_folders',
-  voca_test: 'voca_test_folders',
-  grammar_library: 'grammar_folders',
-  grammar_test: 'grammar_test_folders',
-} as const;
+import { folderModelMap } from '@/server/constants';
+import { prismaCreate } from '@/server/db/utils';
 
 export async function createFolder(user_id: string, request: CreateFolderRequestType) {
   const { type, ...rest } = request;
-
-  const model = modelMap[type];
-  if (!model) throw new Error(`Invalid folder type: ${type}`);
-
-  // @ts-expect-error - Prisma model names are dynamically accessed
-  const folder = await prisma[model].create({
-    data: {
-      user_id,
-      ...rest,
-    },
-  });
-
-  return folder;
+  return prismaCreate(folderModelMap, type, { user_id, ...rest });
 }

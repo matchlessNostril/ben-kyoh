@@ -218,6 +218,11 @@ exports.Prisma.Voca_testsScalarFieldEnum = {
   created_at: 'created_at'
 };
 
+exports.Prisma.UsersScalarFieldEnum = {
+  id: 'id',
+  nickname: 'nickname'
+};
+
 exports.Prisma.SortOrder = {
   asc: 'asc',
   desc: 'desc'
@@ -244,7 +249,8 @@ exports.Prisma.ModelName = {
   voca_files: 'voca_files',
   voca_folders: 'voca_folders',
   voca_test_folders: 'voca_test_folders',
-  voca_tests: 'voca_tests'
+  voca_tests: 'voca_tests',
+  users: 'users'
 };
 
 /**

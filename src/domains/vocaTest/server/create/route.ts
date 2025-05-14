@@ -1,8 +1,8 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { resourceResponseSchema } from '@/server/base/schemas/resource';
+import { resourceResponseSchema } from '@/server/schemas/createResource';
 import { createVocaTestRequestSchema } from './schema';
 import { createVocaTest } from './service';
-import { checkRequestBody, checkAuth } from '@/server/base/utils';
+import { checkRequestBody, checkAuth } from '@/server/utils';
 
 export async function POST(req: NextRequest) {
   const parsed = await checkRequestBody(req, createVocaTestRequestSchema);
