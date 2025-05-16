@@ -36,3 +36,7 @@ When DB Schema Changes
 ```bash
 yarn prisma:pull-generate
 ```
+
+## 🖼️ Folder Structure Overview
+![Folder Structure](https://github.com/user-attachments/assets/f355f894-460a-46d6-ae97-e2e7ade764a4)
+
