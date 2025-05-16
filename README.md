@@ -15,6 +15,24 @@
 | BaaS (BackEnd as a Service) | <img src="https://img.shields.io/badge/Supabase-3FCF8E?style=flat&logo=supabase&logoColor=white" /> |
 | DB ORM | <img src="https://img.shields.io/badge/Prisma-2D3748?style=flat&logo=prisma&logoColor=white" /> |
 | Validation | <img src="https://img.shields.io/badge/Zod-3E67B1?style=flat&logo=zod&logoColor=white" /> |
+| Deploy & Severless Function | <img src="https://img.shields.io/badge/Vercel-000000?style=flat&logo=vercel&logoColor=white" /> |
 | Package Manager | <img src="https://img.shields.io/badge/Yarn Berry (PnP)-FFB3C7?style=flat&logo=yarn&logoColor=white" /> |
 
-## 
+## 🚀 Getting Started
+To set up this project
+```bash
+git clone https://github.com/matchlessNostril/ben-kyoh.git
+cd ben-kyoh
+yarn install
+yarn dev
+```
+
+Before Deploying (Build Check)
+```bash
+yarn build
+```
+
+When DB Schema Changes
+```bash
+yarn prisma:pull-generate
+```
